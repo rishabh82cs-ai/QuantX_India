@@ -103,11 +103,16 @@
     footer a {
       color: #67e8f9;
     }
-  </style>
+  
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:46px;height:46px;border-radius:12px;box-shadow:0 0 24px rgba(34,211,238,.25)}
+    .hero-logo{width:140px;height:140px;border-radius:32px;box-shadow:0 0 50px rgba(34,211,238,.26);margin-bottom:24px}
+</style>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
   <header>
-    <div class="brand">QuantX India</div>
+    <div class="brand"><img src="assets/quantx-logo.png" alt="QuantX India logo"><span>QuantX India</span></div>
     <nav>
       <a href="#product">Product</a>
       <a href="#datafeed">Datafeed</a>
@@ -118,6 +123,7 @@
 
   <main>
     <section class="hero">
+      <img class="hero-logo" src="assets/quantx-logo.png" alt="QuantX India symbol">
       <div class="badge">Private market analytics terminal</div>
       <h1>Professional analytics for Indian index and options markets.</h1>
       <p>
