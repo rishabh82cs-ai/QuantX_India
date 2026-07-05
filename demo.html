@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greexora Demo | Professional Indian Derivatives Intelligence Platform</title>
+  <meta name="description" content="Interactive public demo of Greexora, a professional Indian derivatives analytics, charting, strategy-planning, risk-management, paper-trading, journaling, and broker-execution support platform." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root{
+      --bg:#07111f; --panel:#0d1a2b; --panel2:#102338; --panel3:#081522; --line:#21374f;
+      --text:#eaf2ff; --muted:#94a8c3; --soft:#bdd2ec; --accent:#36d399; --accent2:#5db7ff;
+      --warn:#ffd166; --danger:#ff6b6b; --blue:#7aa2ff; --purple:#b794f6;
+      --radius:18px; --shadow:0 18px 50px rgba(0,0,0,.32);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at 15% 0%,#18345a 0%,#07111f 38%,#050a12 100%);color:var(--text);font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1240px;margin:auto;padding:0 22px}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.85);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 0}
+    .brand{display:flex;align-items:center;gap:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .brand img{height:38px;width:auto;display:block}
+    .navlinks{display:flex;gap:18px;align-items:center;font-size:14px;color:var(--soft)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:var(--text);padding:11px 16px;border-radius:999px;font-weight:700;cursor:pointer;transition:.2s ease;white-space:nowrap}
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.11)}
+    .btn.primary{background:linear-gradient(135deg,#36d399,#5db7ff);color:#04121e;border:0}
+    .btn.danger{background:rgba(255,107,107,.13);border-color:rgba(255,107,107,.45);color:#ffd8d8}
+    .hero{padding:72px 0 36px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:#c6d8ef;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);padding:7px 12px;border-radius:999px;font-size:13px;font-weight:700}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}
+    h1{font-size:clamp(38px,6vw,78px);line-height:.95;margin:20px 0 18px;letter-spacing:-.055em;max-width:980px}
+    .lead{font-size:clamp(17px,2.2vw,22px);color:var(--soft);max-width:900px;margin:0 0 24px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin-top:34px}
+    .card{background:linear-gradient(180deg,rgba(16,35,56,.92),rgba(10,23,38,.92));border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .card.pad{padding:20px}
+    .mini{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:800}
+    .statusbar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+    .stat{padding:14px;border-radius:14px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}
+    .stat b{font-size:20px;display:block;margin:5px 0 1px}
+    .up{color:var(--accent)} .down{color:var(--danger)} .warn{color:var(--warn)}
+    .demo-shell{padding:16px;background:linear-gradient(180deg,rgba(4,10,18,.3),rgba(4,10,18,.1))}
+    .top-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:12px}
+    .ticker{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);border-radius:13px;padding:10px 12px;min-height:70px}
+    .ticker span{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:800}
+    .ticker b{display:block;margin-top:8px;font-size:18px}
+    .workspace{display:grid;grid-template-columns:210px 1fr 295px;gap:12px;min-height:590px}
+    .pane{background:rgba(2,9,17,.48);border:1px solid rgba(255,255,255,.085);border-radius:16px;overflow:hidden}
+    .pane-head{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.08);font-weight:800;color:#dcecff}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;padding:11px;border-bottom:1px solid rgba(255,255,255,.08)}
+    .tab{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);color:var(--soft);padding:7px 10px;border-radius:999px;font-size:12px;font-weight:800;cursor:pointer}
+    .tab.active{background:rgba(54,211,153,.16);color:#caffec;border-color:rgba(54,211,153,.45)}
+    .watch{padding:10px;display:grid;gap:8px}
+    .watch-row{padding:10px;border-radius:12px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;gap:8px;font-size:13px}
+    .chart-area{padding:12px}
+    canvas{width:100%;height:360px;background:linear-gradient(180deg,#071422,#091421);border-radius:14px;border:1px solid rgba(255,255,255,.08);display:block}
+    .below-chart{display:grid;grid-template-columns:1.15fr .85fr;gap:12px;margin-top:12px}
+    table{width:100%;border-collapse:collapse;font-size:12px}
+    th,td{padding:8px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left;white-space:nowrap}
+    th{color:#b8cae3;font-size:11px;text-transform:uppercase;letter-spacing:.08em;background:rgba(255,255,255,.045)}
+    tr:hover td{background:rgba(255,255,255,.035)}
+    .right-stack{display:grid;gap:12px;padding:12px}
+    .module-card{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.045);border-radius:14px;padding:13px}
+    .module-card h3{margin:0 0 8px;font-size:15px}.module-card p{margin:0;color:var(--soft);font-size:13px}
+    .progress{height:8px;background:rgba(255,255,255,.08);border-radius:999px;margin-top:10px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:inherit}
+    .ticket-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.field{background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.08);border-radius:11px;padding:9px}.field span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:800}.field b{font-size:16px}
+    .section{padding:58px 0}.section h2{font-size:clamp(28px,4vw,46px);letter-spacing:-.04em;margin:0 0 13px}.section p.head{color:var(--soft);font-size:18px;max-width:850px;margin:0 0 24px}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.feature{padding:18px;border-radius:18px;background:rgba(255,255,255,.052);border:1px solid rgba(255,255,255,.09)}.feature h3{margin:0 0 8px}.feature p{margin:0;color:var(--soft);font-size:14px}
+    .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.flow div{padding:16px 12px;border-radius:16px;background:rgba(255,255,255,.052);border:1px solid rgba(255,255,255,.09);text-align:center;font-weight:800;font-size:13px}.flow small{display:block;color:var(--muted);font-weight:700;margin-top:5px}
+    .disclaimer{margin-top:26px;padding:16px;border-radius:16px;background:rgba(255,209,102,.08);border:1px solid rgba(255,209,102,.25);color:#ffe9ae;font-size:14px}
+    footer{padding:38px 0;border-top:1px solid rgba(255,255,255,.09);color:var(--muted);font-size:13px}.footgrid{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:start}.footlinks{display:flex;gap:14px;flex-wrap:wrap;color:#c2d3eb}
+    .mobile-note{display:none}
+    @media (max-width:1050px){.hero-grid,.workspace,.below-chart{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.top-strip{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:repeat(3,1fr)}.navlinks{display:none}.mobile-note{display:block}.statusbar{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:620px){.features,.statusbar,.top-strip,.flow,.footgrid{grid-template-columns:1fr}.hero{padding-top:42px}.workspace{min-height:0}.btn{width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html"><img src="../assets/greexora-logo.svg" alt="Greexora logo"/> <span>Demo</span></a>
+      <nav class="navlinks" aria-label="Demo navigation">
+        <a href="#platform">Platform</a><a href="#workflow">Workflow</a><a href="#features">Features</a><a href="#compliance">Compliance</a>
+      </nav>
+      <a class="btn primary" href="#demo">Open Public Demo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow"><span class="dot"></span> Public demo · Simulated data · No live trading</div>
+      <h1>Greexora product demo for Indian options and futures intelligence.</h1>
+      <p class="lead">Explore a compliance-friendly product mockup showing professional charting, hollow candles, price action, option-chain intelligence, futures analytics, strategy planning, risk checks, one-click order preparation, paper trading, and AI trade journaling.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#demo">Launch demo screen</a>
+        <a class="btn" href="#workflow">View workflow</a>
+        <a class="btn" href="compliance.html">Compliance page</a>
+      </div>
+      <div class="hero-grid">
+        <div class="card pad">
+          <div class="mini">Demo scope</div>
+          <div class="statusbar">
+            <div class="stat"><span>Mode</span><b class="warn">Paper</b><small>No broker execution</small></div>
+            <div class="stat"><span>Data</span><b>Simulated</b><small>For presentation</small></div>
+            <div class="stat"><span>Asset class</span><b>Options + Futures</b><small>Indian derivatives</small></div>
+            <div class="stat"><span>Safety</span><b class="up">Manual confirm</b><small>No silent trades</small></div>
+          </div>
+        </div>
+        <div class="card pad">
+          <div class="mini">Public statement</div>
+          <p style="margin:10px 0 0;color:var(--soft)">This demo is a visual product preview. It does not use TradingView-branded libraries, does not use live market data, and does not place live orders.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="wrap section">
+      <h2>Interactive demo screen</h2>
+      <p class="head">This public demo shows the planned Greexora user experience using simulated data. It is safe for website presentation, investor review, broker discussion, and product explanation.</p>
+      <div class="card demo-shell" id="platform">
+        <div class="top-strip">
+          <div class="ticker"><span>NIFTY OPT <em class="up">+0.42%</em></span><b>24,186.45</b><small class="muted">Index options watch</small></div>
+          <div class="ticker"><span>BANKNIFTY FUT <em class="down">-0.18%</em></span><b>52,940.20</b><small>Futures watch</small></div>
+          <div class="ticker"><span>SENSEX OPT <em class="up">+0.31%</em></span><b>79,644.10</b><small>BSE derivatives</small></div>
+          <div class="ticker"><span>USDINR FUT <em class="warn">0.00%</em></span><b>83.41</b><small>Currency derivatives</small></div>
+          <div class="ticker"><span>Risk mode <em class="up">Safe</em></span><b>Paper ON</b><small>Live disabled</small></div>
+        </div>
+        <div class="workspace">
+          <aside class="pane">
+            <div class="pane-head">Watchlist <span class="mini">Demo</span></div>
+            <div class="watch">
+              <div class="watch-row"><b>NIFTY 24500 CE</b><span class="up">+8.2%</span></div>
+              <div class="watch-row"><b>NIFTY 24400 PE</b><span class="down">-5.4%</span></div>
+              <div class="watch-row"><b>BANKNIFTY FUT</b><span class="down">-0.18%</span></div>
+              <div class="watch-row"><b>RELIANCE 3000 CE</b><span class="up">+3.1%</span></div>
+              <div class="watch-row"><b>SENSEX 80000 CE</b><span class="up">+4.7%</span></div>
+              <div class="watch-row"><b>USDINR FUT</b><span class="warn">Flat</span></div>
+            </div>
+            <div class="module-card" style="margin:10px">
+              <h3>Instrument model</h3>
+              <p>Exchange → Segment → Asset class → Underlying → Instrument → Expiry → Contract.</p>
+            </div>
+          </aside>
+          <section class="pane">
+            <div class="pane-head">Professional internal chart <span class="mini">OHLC · Hollow candles · Patterns</span></div>
+            <div class="tabs">
+              <button class="tab active" data-interval="5m">5m</button>
+              <button class="tab" data-interval="15m">15m</button>
+              <button class="tab" data-interval="1h">1h</button>
+              <button class="tab" data-interval="1D">1D</button>
+              <button class="tab" data-interval="custom">Custom minutes</button>
+              <button class="tab" data-interval="history">Custom days</button>
+            </div>
+            <div class="chart-area">
+              <canvas id="chart" width="920" height="430" aria-label="Simulated Greexora candlestick chart"></canvas>
+              <div class="below-chart">
+                <div class="pane">
+                  <div class="pane-head">Option chain intelligence <span class="mini">Simulated</span></div>
+                  <table>
+                    <thead><tr><th>CE OI</th><th>CE LTP</th><th>Strike</th><th>PE LTP</th><th>PE OI</th><th>Signal</th></tr></thead>
+                    <tbody id="chainRows"></tbody>
+                  </table>
+                </div>
+                <div class="pane">
+                  <div class="pane-head">Futures analytics</div>
+                  <table>
+                    <tbody>
+                      <tr><th>Spot</th><td>24,186.45</td></tr><tr><th>Future</th><td>24,221.30</td></tr><tr><th>Basis</th><td class="up">+34.85</td></tr><tr><th>Rollover</th><td>Moderate build-up</td></tr><tr><th>OI trend</th><td>Long build-up watch</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <aside class="pane">
+            <div class="pane-head">Strategy advisor <span class="up">Demo</span></div>
+            <div class="right-stack">
+              <div class="module-card">
+                <h3>Setup quality</h3>
+                <p>Price above support, bullish engulfing near demand zone, put writing support, futures basis positive.</p>
+                <div class="progress"><div class="bar" style="width:72%"></div></div>
+              </div>
+              <div class="module-card">
+                <h3>Suggested category</h3>
+                <p><b class="up">Bullish / hedged strategy</b><br/>Example: bull call spread or paper long futures plan after confirmation.</p>
+              </div>
+              <div class="module-card">
+                <h3>Risk engine</h3>
+                <p>No trade is sent until risk is reviewed and the user confirms. Demo is paper-only.</p>
+                <div class="ticket-row"><div class="field"><span>Entry</span><b>₹168.50</b></div><div class="field"><span>Stop</span><b>₹132.00</b></div><div class="field"><span>Target</span><b>₹228.00</b></div><div class="field"><span>R:R</span><b>1 : 1.63</b></div></div>
+                <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap"><button class="btn primary" id="paperBtn">Paper trade</button><button class="btn danger" id="liveBtn">Live disabled</button></div>
+              </div>
+              <div class="module-card" id="journalBox">
+                <h3>AI trade journal preview</h3>
+                <p>Waiting for paper trade simulation.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="wrap section">
+      <h2>Product workflow</h2>
+      <p class="head">Greexora is designed around a safety-first decision path, from instrument selection to analysis, risk review, paper/live confirmation, and journal review.</p>
+      <div class="flow">
+        <div>Select instrument<small>Options or futures</small></div><div>Load data<small>Broker/API/vendor</small></div><div>Analyse setup<small>Candles + OI</small></div><div>Build strategy<small>Entry/SL/target</small></div><div>Risk check<small>Limits + margin</small></div><div>Journal review<small>AI lessons</small></div>
+      </div>
+    </section>
+
+    <section id="features" class="wrap section">
+      <h2>Demo modules shown</h2>
+      <p class="head">The public demo represents the main planned modules without exposing broker credentials, real order routing, or restricted third-party assets.</p>
+      <div class="features">
+        <div class="feature"><h3>Professional charting</h3><p>Internal OHLC charting with hollow candles, volume, overlays, levels, pattern labels, and time controls.</p></div>
+        <div class="feature"><h3>Pattern engine</h3><p>Classical candlestick pattern recognition with bullish, bearish, reversal, continuation, and indecision labels.</p></div>
+        <div class="feature"><h3>Price action</h3><p>Trend, swing structure, support/resistance, breakout, retest, pullback, and supply/demand zones.</p></div>
+        <div class="feature"><h3>Options intelligence</h3><p>Option chain, PCR, Max Pain, OI change, IV, Greeks, call/put pressure zones, and heatmaps.</p></div>
+        <div class="feature"><h3>Futures analytics</h3><p>Futures price, OI, volume, basis, rollover, spot-vs-futures, and futures trade planning.</p></div>
+        <div class="feature"><h3>Strategy advisor</h3><p>Risk-aware strategy category suggestions for bullish, bearish, range, breakout, reversal, hedged, or no-trade conditions.</p></div>
+        <div class="feature"><h3>Order workflow</h3><p>Pre-filled paper order ticket with entry, stop, target, trailing stop, and reward:risk controls.</p></div>
+        <div class="feature"><h3>AI trade journal</h3><p>Post-trade explanation, mistake review, lessons, EOD review, and weekly performance insights.</p></div>
+      </div>
+    </section>
+
+    <section id="compliance" class="wrap section">
+      <h2>Compliance-friendly demo language</h2>
+      <p class="head">This demo is intentionally designed for safe public presentation. It avoids claims that could imply a formal third-party partnership, guaranteed profits, or uncontrolled live execution.</p>
+      <div class="card pad">
+        <div class="features" style="grid-template-columns:repeat(3,1fr)">
+          <div class="feature"><h3>No TradingView claim</h3><p>Greexora is presented as an internal professional charting system unless formal third-party approval exists.</p></div>
+          <div class="feature"><h3>No live execution</h3><p>Public demo is paper-only. Live trading is disabled and would require user confirmation in production.</p></div>
+          <div class="feature"><h3>No profit guarantee</h3><p>Greexora supports analysis, planning, risk control, journaling, and education. It does not guarantee outcomes.</p></div>
+        </div>
+        <div class="disclaimer"><b>Demo disclaimer:</b> This page uses simulated market information for product presentation only. It is not investment advice, not a live trading terminal, not a broker service, and not affiliated with TradingView unless explicitly stated under a formal agreement.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footgrid">
+      <div>
+        <b>Greexora</b><br/>Professional Indian derivatives analytics, charting, strategy-planning, risk-management, paper-trading, journaling, backtesting, and broker-execution support platform.
+      </div>
+      <div class="footlinks">
+        <a href="index.html">Home</a><a href="compliance.html">Compliance</a><a href="third-party-licenses.html">Third-Party Licenses</a><a href="terms-risk-disclosure.html">Terms & Risk</a><a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById('chart');
+    const ctx = canvas.getContext('2d');
+    function rand(seed){let x=Math.sin(seed)*10000; return x-Math.floor(x)}
+    function data(){
+      const rows=[]; let price=24110;
+      for(let i=0;i<56;i++){
+        const drift = i<18 ? 3.5 : i<34 ? -1.7 : 5.2;
+        const open=price;
+        const close=open + drift + (rand(i*2.17)-.45)*36;
+        const high=Math.max(open,close)+(rand(i*3.91)*28+8);
+        const low=Math.min(open,close)-(rand(i*7.13)*28+8);
+        const vol=900+rand(i*4.33)*1200;
+        rows.push({open,high,low,close,vol}); price=close;
+      }
+      return rows;
+    }
+    const rows=data();
+    function draw(){
+      const w=canvas.width,h=canvas.height; ctx.clearRect(0,0,w,h);
+      ctx.fillStyle='#071421'; ctx.fillRect(0,0,w,h);
+      const pad={l:52,r:70,t:28,b:78}; const cw=w-pad.l-pad.r, ch=h-pad.t-pad.b-55;
+      const highs=rows.map(d=>d.high), lows=rows.map(d=>d.low); const max=Math.max(...highs)+35, min=Math.min(...lows)-35;
+      const x=(i)=>pad.l+i*(cw/(rows.length-1)); const y=(p)=>pad.t+(max-p)/(max-min)*ch;
+      // grid
+      ctx.strokeStyle='rgba(255,255,255,.07)'; ctx.lineWidth=1;
+      for(let i=0;i<6;i++){const yy=pad.t+i*ch/5; ctx.beginPath(); ctx.moveTo(pad.l,yy); ctx.lineTo(w-pad.r,yy); ctx.stroke(); const val=max-i*(max-min)/5; ctx.fillStyle='#7f94af'; ctx.font='12px ui-sans-serif'; ctx.fillText(val.toFixed(0), w-pad.r+12, yy+4)}
+      // levels
+      const levels=[{p:24125,c:'#ffd166',t:'Support zone'},{p:24320,c:'#5db7ff',t:'Resistance'},{p:24240,c:'#b794f6',t:'Max Pain'}];
+      levels.forEach(l=>{const yy=y(l.p); ctx.strokeStyle=l.c; ctx.setLineDash([7,6]); ctx.beginPath(); ctx.moveTo(pad.l,yy); ctx.lineTo(w-pad.r,yy); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle=l.c; ctx.font='bold 12px ui-sans-serif'; ctx.fillText(l.t+' '+l.p, pad.l+8, yy-7)});
+      // candles
+      const step=cw/rows.length; const body=Math.max(5,step*.55);
+      rows.forEach((d,i)=>{const xx=x(i); const up=d.close>=d.open; const color=up?'#36d399':'#ff6b6b'; ctx.strokeStyle=color; ctx.lineWidth=1.8; ctx.beginPath(); ctx.moveTo(xx,y(d.high)); ctx.lineTo(xx,y(d.low)); ctx.stroke(); const yy=Math.min(y(d.open),y(d.close)); const hh=Math.max(4,Math.abs(y(d.open)-y(d.close))); ctx.fillStyle= up ? 'rgba(54,211,153,.06)' : 'rgba(255,107,107,.28)'; ctx.strokeStyle=color; ctx.lineWidth=2; ctx.beginPath(); ctx.rect(xx-body/2,yy,body,hh); ctx.fill(); ctx.stroke();});
+      // volume
+      const volTop=pad.t+ch+18, volH=45; const maxVol=Math.max(...rows.map(r=>r.vol));
+      rows.forEach((d,i)=>{const xx=x(i); const vh=d.vol/maxVol*volH; ctx.fillStyle=d.close>=d.open?'rgba(54,211,153,.34)':'rgba(255,107,107,.32)'; ctx.fillRect(xx-body/2,volTop+volH-vh,body,vh)});
+      // pattern labels and entry marker
+      function label(i,txt,color){const xx=x(i), yy=y(rows[i].high)-28; ctx.fillStyle=color; roundRect(ctx,xx-55,yy-20,110,26,8,true,false); ctx.fillStyle='#05111e'; ctx.font='bold 11px ui-sans-serif'; ctx.textAlign='center'; ctx.fillText(txt,xx,yy-3); ctx.textAlign='left'}
+      label(19,'Hammer watch','#ffd166'); label(36,'Bullish engulf','#36d399'); label(45,'Breakout retest','#5db7ff');
+      const e=42; ctx.fillStyle='#36d399'; ctx.beginPath(); ctx.arc(x(e), y(rows[e].close), 6,0,Math.PI*2); ctx.fill(); ctx.font='bold 12px ui-sans-serif'; ctx.fillText('Paper entry',x(e)+10,y(rows[e].close)+4);
+      ctx.fillStyle='#9fb3cc'; ctx.font='12px ui-sans-serif'; ctx.fillText('Greexora demo chart · simulated data · internal charting preview', pad.l, h-18);
+    }
+    function roundRect(ctx,x,y,w,h,r,fill,stroke){if(w<2*r)r=w/2;if(h<2*r)r=h/2;ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();if(fill)ctx.fill();if(stroke)ctx.stroke()}
+    draw();
+    const strikes=[24200,24250,24300,24350,24400,24450,24500];
+    document.getElementById('chainRows').innerHTML = strikes.map((s,i)=>`<tr><td>${(2.8+i*.5).toFixed(1)}M</td><td>${(220-i*23).toFixed(1)}</td><td><b>${s}</b></td><td>${(78+i*18).toFixed(1)}</td><td>${(3.4+(6-i)*.38).toFixed(1)}M</td><td class="${i<3?'up':i===3?'warn':'down'}">${i<3?'Put support':i===3?'ATM':'Call wall'}</td></tr>`).join('');
+    document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');draw()}));
+    document.getElementById('paperBtn').addEventListener('click',()=>{document.getElementById('journalBox').innerHTML='<h3>AI trade journal preview</h3><p><b class="up">Paper trade simulated.</b><br/>Reason: bullish pattern near support with positive futures basis. Risk: expiry and volatility. Lesson: wait for confirmation above resistance before live consideration.</p>'});
+    document.getElementById('liveBtn').addEventListener('click',()=>alert('Live execution is disabled in the public demo. Production workflow requires broker connection, risk check, and manual user confirmation.'));
+  </script>
+</body>
+</html>
