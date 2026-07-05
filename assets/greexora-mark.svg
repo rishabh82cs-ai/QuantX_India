@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Greexora mark</title>
+  <desc id="desc">Abstract Greexora G with candle and analytics line.</desc>
+  <rect width="512" height="512" rx="96" fill="#0B1F3A"/>
+  <path d="M335 159C307 128 267 110 221 110C144 110 83 172 83 256C83 340 146 402 228 402C289 402 338 369 360 318H242V249H438C443 318 424 377 385 418C347 460 293 484 229 484C104 484 10 389 10 256C10 124 104 28 225 28C301 28 364 58 407 109L335 159Z" fill="white" transform="translate(36,0) scale(0.88)"/>
+  <line x1="150" y1="360" x2="392" y2="176" stroke="#18B26B" stroke-width="34" stroke-linecap="round"/>
+  <circle cx="150" cy="360" r="21" fill="#18B26B"/>
+  <circle cx="392" cy="176" r="21" fill="#18B26B"/>
+  <rect x="237" y="114" width="28" height="286" rx="14" fill="#F8FAFC" opacity="0.95"/>
+  <rect x="207" y="196" width="88" height="116" rx="16" fill="#18B26B"/>
+</svg>

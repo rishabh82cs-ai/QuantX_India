@@ -1,0 +1,20 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Greexora logo dark</title>
+  <desc id="desc">Greexora dark wordmark with abstract G, candle, and upward analytics line.</desc>
+  <rect width="1200" height="360" rx="42" fill="#071426"/>
+  <g transform="translate(74,54)">
+    <circle cx="126" cy="126" r="112" fill="#0F2C4E"/>
+    <path d="M172 78C158 62 137 52 112 52C72 52 40 84 40 126C40 168 72 200 115 200C147 200 173 182 184 155H121V119H224C226 155 216 186 196 207C176 229 148 241 115 241C49 241 0 192 0 126C0 60 49 12 113 12C152 12 184 27 207 54L172 78Z" fill="white" transform="translate(14,4) scale(0.92)"/>
+    <line x1="63" y1="184" x2="195" y2="85" stroke="#18B26B" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="63" cy="184" r="10" fill="#18B26B"/>
+    <circle cx="195" cy="85" r="10" fill="#18B26B"/>
+    <rect x="112" y="54" width="13" height="146" rx="6.5" fill="#F8FAFC" opacity="0.95"/>
+    <rect x="97" y="96" width="43" height="57" rx="8" fill="#18B26B"/>
+  </g>
+  <g transform="translate(340,92)">
+    <text x="0" y="82" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="800" font-size="88" letter-spacing="8" fill="#F8FAFC">GREEXORA</text>
+    <text x="4" y="145" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="600" font-size="26" letter-spacing="2.6" fill="#A7B6C5">PROFESSIONAL INTELLIGENCE FOR INDIAN DERIVATIVES</text>
+    <rect x="5" y="176" width="520" height="6" rx="3" fill="#18B26B"/>
+    <text x="4" y="226" font-family="Inter, Arial, Helvetica, sans-serif" font-weight="500" font-size="22" fill="#C9D4E1">Analyse • Plan • Control Risk • Journal Every Trade</text>
+  </g>
+</svg>
