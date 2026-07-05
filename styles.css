@@ -60,3 +60,9 @@ h2 { font-size: clamp(30px, 4vw, 46px); line-height: 1.1; color: var(--gx-navy);
 @media (max-width: 520px) {
   .workflow, .compliance-list { grid-template-columns: 1fr; }
 }
+
+
+.table-wrap { overflow-x: auto; margin-top: 1rem; }
+table { width: 100%; border-collapse: collapse; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.12); }
+th, td { padding: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.10); text-align: left; vertical-align: top; }
+th { color: #d8e8ff; font-weight: 700; background: rgba(255,255,255,0.06); }

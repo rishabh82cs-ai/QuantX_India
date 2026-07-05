@@ -1,14 +1,39 @@
 # Greexora Third-Party License Register
 
-Maintain this file for every library, data source, API, font, icon, and export component used in the website or product.
+This register must be reviewed before each public release.
 
-| Component | Purpose | Source | License / Terms | Attribution Required | Commercial Use Allowed | Notes |
-|---|---|---|---|---|---|---|
-| Greexora custom chart engine | Internal charting | Internal | Proprietary / project-owned | No | Yes | Avoid third-party branding. |
-| TradingView Lightweight Charts | Optional open-source charting | TradingView GitHub | Apache 2.0 | Yes, if used | Check license terms | Keep license and NOTICE files. |
-| TradingView Advanced Charts | Optional future charting | TradingView | Requires approval | As required | Only after approval | Do not claim use before approval. |
-| TradingView Trading Platform | Optional future trading chart library | TradingView | Requires approval | As required | Only after approval | Requires broker backend/data/order routing readiness. |
-| Dhan API | Broker data/orders | Dhan | Broker API terms | No public brand claim unless permitted | Subject to broker terms | Keep credentials secure. |
-| Market data vendor | Live/historical data | TBD | Vendor agreement | TBD | TBD | Must be recorded before public use. |
-| Fonts | Website/app typography | TBD | TBD | TBD | TBD | Do not embed restricted fonts without license. |
-| Icons | Website/app icons | TBD | TBD | TBD | TBD | Avoid TradingView icons/brand assets unless permitted. |
+## Charting
+
+- Greexora should describe charting as an internal professional charting system unless a formal TradingView agreement exists.
+- TradingView Advanced Charts / Trading Platform libraries must only be used after formal approval and under permitted terms.
+- If TradingView Lightweight Charts is used, keep the applicable license copy, attribution, NOTICE records, version, source URL, and public license reference.
+- Do not use TradingView-branded screenshots, branding, protected icons, or public claims unless permitted.
+
+## Market Data
+
+- Use approved broker APIs, exchange-authorised sources, licensed market-data vendors, or other legally permitted data sources.
+- Do not use scraped TradingView data, personal TradingView subscription data, browser sessions, or user-account market data as Greexora backend data.
+
+## Broker APIs
+
+- Record API permissions, authentication rules, rate limits, static IP requirements where applicable, and live order workflow requirements.
+- Live orders must remain user-confirmed unless a future execution mode is separately reviewed for broker, exchange, and regulatory compliance.
+
+## Fonts, Icons, and Assets
+
+- Use original Greexora assets or properly licensed third-party assets.
+- Record license type, author/source, version, and attribution requirement.
+
+## Reports and Export Libraries
+
+- Record libraries used for Excel, PDF, chart exports, analytics, and database operations.
+
+## Release Checklist
+
+- [ ] No unauthorised TradingView affiliation claims.
+- [ ] No unauthorised TradingView library claims.
+- [ ] No scraped or personal-subscription market data.
+- [ ] License/NOTICE files retained where required.
+- [ ] Third-party assets reviewed.
+- [ ] Risk and compliance footer present.
+- [ ] Paper mode and manual live confirmation wording preserved.
