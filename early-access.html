@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Early Access Registration | Greexora</title>
+  <meta name="description" content="Register interest for Greexora early access. Greexora is a professional Indian derivatives intelligence platform for charting, analytics, strategy planning, risk workflow, paper trading, and AI journaling." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="early-access.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img src="assets/greexora-mark.svg" alt="Greexora logo mark"> GREEXORA</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#workflow">Workflow</a>
+        <a href="index.html#roadmap">Roadmap</a>
+        <a href="demo.html">Demo</a>
+        <a href="compliance.html">Compliance</a>
+        <a href="third-party-licenses.html">Licenses</a>
+        <a href="early-access.html" class="btn btn-primary active-early">Early Access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="ea-hero">
+      <div class="container ea-hero-grid">
+        <div>
+          <div class="eyebrow">Early access registration</div>
+          <h1>Join the Greexora early access list.</h1>
+          <p class="lead">Register your interest in Greexora’s professional Indian derivatives intelligence platform. The form is for product updates, demo access, feedback sessions, and future private testing invitations.</p>
+          <div class="ea-safe-strip">
+            <strong>Safety note:</strong> This is not a live trading signup, advisory service, signal service, or guarantee of access. Greexora remains a risk-first analytics and workflow platform.
+          </div>
+        </div>
+        <aside class="ea-summary-card">
+          <img src="assets/greexora-logo-dark.svg" alt="Greexora wordmark" />
+          <h2>What early users can preview</h2>
+          <ul>
+            <li>Internal professional charting preview</li>
+            <li>Candlestick patterns and price action</li>
+            <li>Options and futures intelligence</li>
+            <li>Strategy advisor and risk workflow</li>
+            <li>Paper trading and AI trade journal concepts</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="ea-section">
+      <div class="container ea-grid">
+        <form id="earlyAccessForm" class="ea-form" autocomplete="on">
+          <h2>Registration form</h2>
+          <p class="sub">Fill this in and press submit. Because the website is currently hosted as a static GitHub Pages site, the form will prepare an email enquiry instead of storing your data on a server.</p>
+
+          <div class="ea-two">
+            <label>Full name
+              <input required name="fullName" type="text" placeholder="Your name" />
+            </label>
+            <label>Email address
+              <input required name="email" type="email" placeholder="name@example.com" />
+            </label>
+          </div>
+
+          <div class="ea-two">
+            <label>Phone / WhatsApp
+              <input name="phone" type="tel" placeholder="Optional" />
+            </label>
+            <label>City / Country
+              <input name="location" type="text" placeholder="Example: Perth, Australia" />
+            </label>
+          </div>
+
+          <div class="ea-two">
+            <label>Trading profile
+              <select name="profile" required>
+                <option value="">Select profile</option>
+                <option>Beginner trader</option>
+                <option>Intermediate trader</option>
+                <option>Advanced trader</option>
+                <option>Options trader</option>
+                <option>Futures trader</option>
+                <option>Developer / reviewer</option>
+                <option>Broker / partner enquiry</option>
+              </select>
+            </label>
+            <label>Preferred platform
+              <select name="platform" required>
+                <option value="">Select platform</option>
+                <option>macOS desktop</option>
+                <option>Windows desktop</option>
+                <option>Web app</option>
+                <option>Android app</option>
+                <option>iOS app</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Markets of interest</legend>
+            <div class="ea-check-grid">
+              <label><input type="checkbox" name="markets" value="NSE index options" /> NSE index options</label>
+              <label><input type="checkbox" name="markets" value="NSE stock options" /> NSE stock options</label>
+              <label><input type="checkbox" name="markets" value="Index futures" /> Index futures</label>
+              <label><input type="checkbox" name="markets" value="Stock futures" /> Stock futures</label>
+              <label><input type="checkbox" name="markets" value="Currency derivatives" /> Currency derivatives</label>
+              <label><input type="checkbox" name="markets" value="Commodity derivatives" /> Commodity derivatives</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Features you want to test</legend>
+            <div class="ea-check-grid">
+              <label><input type="checkbox" name="features" value="Professional charting" /> Professional charting</label>
+              <label><input type="checkbox" name="features" value="Hollow candles" /> Hollow candles</label>
+              <label><input type="checkbox" name="features" value="Candlestick patterns" /> Candlestick patterns</label>
+              <label><input type="checkbox" name="features" value="Price action" /> Price action</label>
+              <label><input type="checkbox" name="features" value="Option-chain intelligence" /> Option-chain intelligence</label>
+              <label><input type="checkbox" name="features" value="Futures analytics" /> Futures analytics</label>
+              <label><input type="checkbox" name="features" value="Strategy advisor" /> Strategy advisor</label>
+              <label><input type="checkbox" name="features" value="One-click order workflow" /> One-click order workflow</label>
+              <label><input type="checkbox" name="features" value="Paper trading" /> Paper trading</label>
+              <label><input type="checkbox" name="features" value="AI trade journal" /> AI trade journal</label>
+              <label><input type="checkbox" name="features" value="Backtesting/replay" /> Backtesting / replay</label>
+              <label><input type="checkbox" name="features" value="Alerts" /> Alerts</label>
+            </div>
+          </fieldset>
+
+          <div class="ea-two">
+            <label>Broker currently used
+              <input name="broker" type="text" placeholder="Example: Dhan, Zerodha, none yet" />
+            </label>
+            <label>Preferred access type
+              <select name="accessType">
+                <option>Product updates only</option>
+                <option>Demo walkthrough</option>
+                <option>Private beta waiting list</option>
+                <option>Developer/testing feedback</option>
+                <option>Business/partner discussion</option>
+              </select>
+            </label>
+          </div>
+
+          <label>What do you want Greexora to help you with?
+            <textarea name="message" rows="6" placeholder="Tell us your trading workflow, pain points, or what you want to test first."></textarea>
+          </label>
+
+          <div class="ea-consent">
+            <label><input required type="checkbox" name="riskConsent" /> I understand Greexora does not guarantee profits, does not remove trading risk, and does not provide risk-free outcomes.</label>
+            <label><input required type="checkbox" name="contactConsent" /> I agree to be contacted about Greexora early access, product updates, or demo sessions.</label>
+            <label><input required type="checkbox" name="demoConsent" /> I understand early access may use simulated data, paper mode, or limited demo functionality before production release.</label>
+          </div>
+
+          <div class="ea-actions">
+            <button type="submit" class="btn btn-primary">Submit early access request</button>
+            <button type="reset" class="btn btn-secondary">Clear form</button>
+          </div>
+        </form>
+
+        <aside class="ea-side-panel">
+          <h2>What happens after submit?</h2>
+          <ol>
+            <li>Your browser prepares an email enquiry with your form details.</li>
+            <li>You can review the email before sending it.</li>
+            <li>Greexora can respond with demo access, beta updates, or product information.</li>
+          </ol>
+          <div class="ea-box">
+            <strong>Recommended future upgrade</strong>
+            <p>When you want automatic storage, connect this form to a proper backend, Google Forms, Formspree, Airtable, CRM, or your own database. Do not collect sensitive broker keys through this form.</p>
+          </div>
+          <div class="ea-box warning">
+            <strong>Do not submit</strong>
+            <p>Broker passwords, API keys, access tokens, PAN/Aadhaar, bank details, or trading account passwords.</p>
+          </div>
+          <div id="formPreview" class="ea-preview" hidden>
+            <h3>Prepared request preview</h3>
+            <pre id="previewText"></pre>
+            <button id="copyPreview" type="button" class="btn btn-secondary">Copy request text</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container notice">
+        <strong>Risk and compliance notice:</strong> Early access registration is for product communication only. Greexora is an analytics, charting, strategy-planning, risk-management, paper-trading, journaling, backtesting, and broker-execution support platform. It does not guarantee profits, does not eliminate trading risk, and does not provide risk-free trading outcomes. Live order workflows, where available, require user confirmation.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><strong>GREEXORA</strong><p>Professional intelligence for Indian derivatives trading.</p></div>
+      <div><p><a href="index.html">Home</a> · <a href="demo.html">Demo</a> · <a href="compliance.html">Compliance</a> · <a href="third-party-licenses.html">Third-Party Licenses</a> · <a href="privacy.html">Privacy</a></p><p>Early access enquiries are handled through the registration form on this page.</p></div>
+    </div>
+  </footer>
+
+<script>
+(function(){
+  const ownerEmail = 'rishabh82.cs@gmail.com';
+  const form = document.getElementById('earlyAccessForm');
+  const preview = document.getElementById('formPreview');
+  const previewText = document.getElementById('previewText');
+  const copyButton = document.getElementById('copyPreview');
+
+  function checkedValues(formData, name){
+    return formData.getAll(name).filter(Boolean).join(', ') || 'Not selected';
+  }
+  function textValue(formData, name){
+    return (formData.get(name) || '').toString().trim() || 'Not provided';
+  }
+  function buildMessage(formData){
+    return [
+      'Greexora Early Access Registration',
+      '-----------------------------------',
+      'Full name: ' + textValue(formData, 'fullName'),
+      'Email: ' + textValue(formData, 'email'),
+      'Phone / WhatsApp: ' + textValue(formData, 'phone'),
+      'Location: ' + textValue(formData, 'location'),
+      'Trading profile: ' + textValue(formData, 'profile'),
+      'Preferred platform: ' + textValue(formData, 'platform'),
+      'Markets of interest: ' + checkedValues(formData, 'markets'),
+      'Features to test: ' + checkedValues(formData, 'features'),
+      'Broker currently used: ' + textValue(formData, 'broker'),
+      'Preferred access type: ' + textValue(formData, 'accessType'),
+      '',
+      'Message:',
+      textValue(formData, 'message'),
+      '',
+      'Consent confirmations:',
+      '- Risk/no guarantee understood: yes',
+      '- Contact permission: yes',
+      '- Demo/pre-release limitations understood: yes',
+      '',
+      'Important: Please do not include broker passwords, API keys, access tokens, bank details, or personal identity documents in email.'
+    ].join('\n');
+  }
+
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+    if(!form.reportValidity()) return;
+    const formData = new FormData(form);
+    const message = buildMessage(formData);
+    const subject = 'Greexora Early Access Registration - ' + textValue(formData, 'fullName');
+    preview.hidden = false;
+    previewText.textContent = message;
+    const mailto = 'mailto:' + encodeURIComponent(ownerEmail) + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+    window.location.href = mailto;
+  });
+
+  copyButton.addEventListener('click', async function(){
+    const text = previewText.textContent;
+    try {
+      await navigator.clipboard.writeText(text);
+      copyButton.textContent = 'Copied';
+      setTimeout(()=>copyButton.textContent='Copy request text', 1600);
+    } catch (e) {
+      alert('Copy failed. Please select and copy the preview text manually.');
+    }
+  });
+})();
+</script>
+</body>
+</html>
