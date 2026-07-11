@@ -69,41 +69,35 @@ th { color: #d8e8ff; font-weight: 700; background: rgba(255,255,255,0.06); }
 
 /* GREEXORA_MULTI_MARKET_STYLES_START */
 .multi-market-section,
-.architecture-section {
-  background: linear-gradient(180deg, rgba(238, 247, 243, .72), rgba(255, 255, 255, 0));
+.architecture-section,
+.early-market-interest {
+  background: linear-gradient(180deg, rgba(238, 247, 243, .74), rgba(255, 255, 255, 0));
 }
 .market-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
 }
-.market-grid-page {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
+.market-grid-page { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .market-card {
-  border: 1px solid #d8e2ee;
+  border: 1px solid var(--gx-border, #d8e2ee);
   border-radius: 20px;
   background: #fff;
   padding: 22px;
   box-shadow: 0 12px 34px rgba(11, 27, 51, .07);
 }
-.market-card h3 { margin: 16px 0 8px; }
+.market-card h3 { margin: 16px 0 8px; color: var(--gx-navy, #0b1f3a); }
 .market-card p,
-.market-card li { color: #5a6b7f; line-height: 1.65; }
+.market-card li { color: var(--gx-muted, #5a6b7f); line-height: 1.65; }
 .market-card ul { padding-left: 20px; margin-bottom: 0; }
-.market-card-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: center;
-}
+.market-card-top { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
 .market-code {
   display: inline-grid;
   place-items: center;
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  background: #0b1b33;
+  background: var(--gx-navy, #0b1f3a);
   color: #fff;
   font-weight: 900;
   letter-spacing: .05em;
@@ -120,33 +114,38 @@ th { color: #d8e8ff; font-weight: 700; background: rgba(255,255,255,0.06); }
   font-weight: 800;
   white-space: nowrap;
 }
-.status-foundation {
-  color: #1f6a3c;
-  background: #eaf7ef;
-  border-color: #bfe1ca;
-}
-.market-cta {
+.status-foundation { color: #1f6a3c; background: #eaf7ef; border-color: #bfe1ca; }
+.market-cta,
+.market-interest-panel,
+.roadmap-callout {
   margin-top: 22px;
-  padding: 22px 24px;
+  padding: 24px;
   border: 1px solid #cfe1d6;
-  border-radius: 20px;
+  border-radius: 22px;
   background: #f2faf5;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
 }
+.market-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .market-cta p { margin: 5px 0 0; color: #5a6b7f; }
-.market-hero .hero-card h2 { margin-top: 8px; }
+.market-hero .hero-card h2 { margin-top: 8px; color: #fff; font-size: clamp(27px, 3vw, 38px); }
 .demo-market-notice { padding: 18px 0 0; }
+.market-interest-panel { display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 28px; }
+.market-interest-panel h2 { margin-bottom: 10px; }
+.market-interest-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.market-interest-chips span,
+.roadmap-steps span { border: 1px solid #cfe1d6; border-radius: 999px; background: #fff; padding: 9px 12px; font-weight: 800; color: #29415e; }
+.roadmap-callout { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.roadmap-steps { display: grid; gap: 10px; align-content: center; }
 @media (max-width: 1100px) {
   .market-grid,
   .market-grid-page { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 700px) {
   .market-grid,
-  .market-grid-page { grid-template-columns: 1fr; }
+  .market-grid-page,
+  .market-interest-panel,
+  .roadmap-callout { grid-template-columns: 1fr; }
   .market-cta { align-items: flex-start; flex-direction: column; }
+  .status-pill { white-space: normal; }
 }
 /* GREEXORA_MULTI_MARKET_STYLES_END */
 
