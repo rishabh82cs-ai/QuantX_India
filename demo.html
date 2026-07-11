@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Greexora Demo | Indian Options Trading Platform Preview</title>
-  <meta name="description" content="Explore the Greexora demo for professional NIFTY and BANKNIFTY options analytics, charting workflows, market intelligence, and trading platform features.">
+  <title>Greexora Multi-Market Demo | India, US, Australia, Forex & UAE</title>
+  <meta name="description" content="Explore Greexora’s simulated multi-market platform workflow for India, the United States, Australia, Forex, and the UAE, with paper trading, risk controls, analytics, reconciliation, and live-activation gates.">
   <link rel="canonical" href="https://quantx-india.com/demo.html">
   <meta property="og:site_name" content="Greexora">
   <meta property="og:title" content="Greexora Demo | Indian Options Trading Platform Preview">
@@ -107,7 +107,7 @@
       <div>
         <p class="eyebrow">Interactive simulated platform preview</p>
         <h1>Greexora Demo</h1>
-        <p class="lead">A detailed public demo showing the proposed Greexora workflow: select an Indian derivative instrument, inspect internal professional charts, read candles and price action, review options and futures intelligence, receive a strategy category, prepare a risk-checked order ticket, paper trade it, and generate an AI trade journal.</p>
+        <p class="lead">A detailed simulated preview of Greexora’s market-neutral workflow across India, the United States, Australia, Forex, and the UAE: choose a market, inspect professional charts and analytics, prepare a risk-checked order, paper trade it, reconcile the result, and generate an AI-assisted journal entry.</p>
         <div class="hero-actions">
           <button class="primary" data-scroll="workspace">Open demo workspace</button>
           <button class="secondary" data-scroll="module-map">View all modules</button>
@@ -123,11 +123,96 @@
       </div>
     </section>
 
-    <section id="workspace" class="workspace">
+
+<!-- GREEXORA_MULTI_MARKET_DEMO_WORKSPACE_START -->
+<section id="multi-market-demo" class="demo-multi-market">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Interactive simulated market selector</p>
+      <h2>Preview the same Greexora workflow across five market regions.</h2>
+      <p class="sub">Choose a market to update the simulated session, currency, instrument, asset coverage, and validation gate. No live data or broker connection is used.</p>
+    </div>
+
+    <div class="demo-market-tabs" role="tablist" aria-label="Greexora demo markets">
+      <button type="button" class="demo-market-tab is-active" data-market="IN" aria-pressed="true">
+        <span class="demo-market-flag">IN</span>
+        <span><strong>India</strong><small>NSE · BSE</small></span>
+      </button>
+      <button type="button" class="demo-market-tab" data-market="US" aria-pressed="false">
+        <span class="demo-market-flag">US</span>
+        <span><strong>United States</strong><small>NYSE · Nasdaq · Cboe</small></span>
+      </button>
+      <button type="button" class="demo-market-tab" data-market="AU" aria-pressed="false">
+        <span class="demo-market-flag">AU</span>
+        <span><strong>Australia</strong><small>ASX-oriented</small></span>
+      </button>
+      <button type="button" class="demo-market-tab" data-market="FX" aria-pressed="false">
+        <span class="demo-market-flag">FX</span>
+        <span><strong>Forex</strong><small>24×5 currency pairs</small></span>
+      </button>
+      <button type="button" class="demo-market-tab" data-market="AE" aria-pressed="false">
+        <span class="demo-market-flag">AE</span>
+        <span><strong>UAE</strong><small>ADX · DFM</small></span>
+      </button>
+    </div>
+
+    <div class="demo-market-workspace" aria-live="polite">
+      <div class="demo-market-summary">
+        <div>
+          <span class="demo-label">Selected market</span>
+          <strong id="demoMarketName">India</strong>
+        </div>
+        <div>
+          <span class="demo-label">Example instrument</span>
+          <strong id="demoInstrument">NIFTY index option</strong>
+        </div>
+        <div>
+          <span class="demo-label">Currency</span>
+          <strong id="demoCurrency">INR</strong>
+        </div>
+        <div>
+          <span class="demo-label">Session model</span>
+          <strong id="demoSession">Asia/Kolkata exchange session</strong>
+        </div>
+      </div>
+
+      <div class="demo-market-detail-grid">
+        <article class="demo-market-detail">
+          <span class="demo-detail-kicker">Asset coverage</span>
+          <h3 id="demoAssets">Indices, equities, options and futures</h3>
+          <p id="demoAssetsNote">NSE and BSE-oriented simulated instruments with expiry, strike, lot-size, tick-size, and INR fee handling.</p>
+        </article>
+
+        <article class="demo-market-detail">
+          <span class="demo-detail-kicker">Paper execution model</span>
+          <h3 id="demoExecution">Order → fill → position → P&amp;L</h3>
+          <p id="demoExecutionNote">Simulated orders include partial fills, slippage, fees, stop/target handling, and an execution ledger.</p>
+        </article>
+
+        <article class="demo-market-detail">
+          <span class="demo-detail-kicker">Live-readiness gate</span>
+          <h3 id="demoGate">India paper-validation gate</h3>
+          <p id="demoGateNote">Live execution remains disabled until data, risk, reconciliation, failure, and recovery checks pass and explicit approval is provided.</p>
+        </article>
+      </div>
+
+      <div class="demo-paper-strip">
+        <span class="status-dot" aria-hidden="true"></span>
+        <strong>Paper / Demo mode</strong>
+        <span>Simulated data</span>
+        <span>Live orders disabled</span>
+        <span>Manual approval required</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- GREEXORA_MULTI_MARKET_DEMO_WORKSPACE_END -->
+
+<section id="workspace" class="workspace">
       <aside class="sidebar">
         <h2>Control Panel</h2>
         <label>
-          Market universe
+          Asset universe
           <select id="universeSelect">
             <option value="indexOptions">Index Options</option>
             <option value="stockOptions">Stock Options</option>
@@ -186,7 +271,7 @@
           </select>
         </label>
         <button id="refreshDemo" class="primary full">Refresh simulated data</button>
-        <div class="small-note">Controls are interactive and update the simulated demo panels. They do not connect to live market data or a broker.</div>
+        <div class="small-note">Controls are interactive and update simulated demo panels. The market selector above changes market-specific context; no control connects to live market data or a broker.</div>
       </aside>
 
       <section class="main-panel">
@@ -220,7 +305,7 @@
             <div class="card">
               <h3>Current workflow status</h3>
               <ul class="check-list">
-                <li>Instrument model uses exchange → segment → asset class → underlying → instrument type → expiry → contract.</li>
+                <li>Instrument model uses market → exchange or venue → asset class → underlying or pair → instrument type → expiry or tenor → contract.</li>
                 <li>Charting is described as an internal professional charting system.</li>
                 <li>Order workflow is paper-first and manual-confirmation-first.</li>
                 <li>No guarantee, risk-free, or sure-shot wording is used in the demo.</li>
@@ -327,7 +412,7 @@
           <div class="compliance-grid">
             <div class="card"><h3>Charting language</h3><p>Greexora uses “internal professional charting system” wording in this demo. It does not claim TradingView-powered charts, official TradingView integration, or TradingView affiliation.</p></div>
             <div class="card"><h3>Data language</h3><p>All demo data is simulated. Production data should come from approved broker APIs, exchange-authorised data sources, or licensed vendors.</p></div>
-            <div class="card"><h3>Order language</h3><p>Paper mode is default. Live orders require user confirmation. No silent live execution is shown or promised.</p></div>
+            <div class="card"><h3>Order language</h3><p>Paper mode is default for every market. Live activation is market-specific, requires completed validation and reconciliation evidence, and still requires explicit user confirmation. No silent live execution is shown or promised.</p></div>
             <div class="card"><h3>Risk language</h3><p>No guaranteed profit, fixed return, sure-shot signal, or risk-free trading claims are made.</p></div>
           </div>
         </div>
@@ -341,7 +426,7 @@
 
     <section class="closing-cta">
       <h2>Public demo purpose</h2>
-      <p>This page is designed to help visitors understand the intended Greexora product experience while staying compliance-friendly. It is not a live trading terminal, not a market-data feed, and not an order execution platform.</p>
+      <p>This page helps visitors understand the intended Greexora multi-market product experience while staying compliance-friendly. It is a simulated preview, not a live trading platform, market-data feed, or order-execution service.</p>
       <a class="primary link-button" href="compliance.html">Read compliance policy</a>
     </section>
   </main>
@@ -356,7 +441,7 @@
   </div>
 
   <footer class="site-footer">
-    <div><strong>Greexora</strong><span>Professional Indian derivatives intelligence platform</span></div>
+    <div><strong>Greexora</strong><span>Professional multi-market trading intelligence platform</span></div>
     <nav>
       <a href="index.html">Home</a>
       <a href="compliance.html">Compliance</a>
@@ -367,5 +452,111 @@
     <p class="disclaimer">Greexora is an analytics, charting, strategy-planning, risk-management, paper-trading, journaling, backtesting, and broker-execution support platform. It does not guarantee profits, does not eliminate trading risk, and does not provide risk-free trading outcomes. Greexora is not affiliated with TradingView unless explicitly stated under a formal agreement.</p>
   </footer>
   <script src="demo.js"></script>
+
+<!-- GREEXORA_MULTI_MARKET_DEMO_SCRIPT_START -->
+<script>
+(function () {
+  const marketData = {
+    IN: {
+      name: "India",
+      instrument: "NIFTY index option",
+      currency: "INR",
+      session: "Asia/Kolkata exchange session",
+      assets: "Indices, equities, options and futures",
+      assetsNote: "NSE and BSE-oriented simulated instruments with expiry, strike, lot-size, tick-size, and INR fee handling.",
+      execution: "Order → fill → position → P&L",
+      executionNote: "Simulated orders include partial fills, slippage, fees, stop/target handling, and an execution ledger.",
+      gate: "India paper-validation gate",
+      gateNote: "Live execution remains disabled until data, risk, reconciliation, failure, and recovery checks pass and explicit approval is provided."
+    },
+    US: {
+      name: "United States",
+      instrument: "SPY listed option",
+      currency: "USD",
+      session: "America/New_York regular and extended sessions",
+      assets: "Stocks, ETFs, listed options and futures-ready workflows",
+      assetsNote: "Simulated US instruments use exchange calendars, option contract multipliers, USD fees, and market-specific session handling.",
+      execution: "Broker-neutral US paper workflow",
+      executionNote: "The preview models US-style orders, fills, slippage, fees, positions, and a USD execution ledger without connecting to a broker.",
+      gate: "US paper-validation gate",
+      gateNote: "US live readiness stays disabled until authorised data and broker paths, risk controls, reconciliation, and recovery checks pass."
+    },
+    AU: {
+      name: "Australia",
+      instrument: "ASX 200 / equity workflow",
+      currency: "AUD",
+      session: "Australia/Sydney exchange session",
+      assets: "ASX-oriented equities and derivatives-ready workflows",
+      assetsNote: "Simulated Australian instruments use local sessions, AUD accounting, market-specific tick sizes, fees, and settlement context.",
+      execution: "AUD paper order and portfolio workflow",
+      executionNote: "Orders, fills, fees, positions, cash, and P&L are simulated with an Australian-market context and audit trail.",
+      gate: "Australia paper-validation gate",
+      gateNote: "Live activation stays disabled until the selected data and broker route passes paper execution, reconciliation, and failure testing."
+    },
+    FX: {
+      name: "Forex",
+      instrument: "EUR/USD currency pair",
+      currency: "Multi-currency",
+      session: "24×5 global session model",
+      assets: "Major, minor and selected cross-currency pairs",
+      assetsNote: "The simulated Forex model uses base/quote currencies, pip values, lot sizes, rollover context, and session-aware pricing.",
+      execution: "Pair-aware paper execution",
+      executionNote: "The preview models spread, slippage, order size, stop/target behaviour, currency conversion, and multi-currency P&L.",
+      gate: "Forex paper-validation gate",
+      gateNote: "Live Forex connectivity remains disabled until pricing, conversion, leverage, risk, reconciliation, and recovery controls pass."
+    },
+    AE: {
+      name: "United Arab Emirates",
+      instrument: "ADX / DFM equity workflow",
+      currency: "AED",
+      session: "Asia/Dubai local exchange session",
+      assets: "ADX and DFM-oriented equity coverage targets",
+      assetsNote: "Simulated UAE workflows use local sessions, AED accounting, venue identifiers, fees, and authorised-data requirements.",
+      execution: "AED paper order and ledger workflow",
+      executionNote: "The preview models orders, fills, positions, fees, cash, and P&L without representing current live broker availability.",
+      gate: "UAE paper-validation gate",
+      gateNote: "Live activation remains disabled until authorised data, broker access, local controls, reconciliation, and explicit approval are complete."
+    }
+  };
+
+  const fields = {
+    name: document.getElementById("demoMarketName"),
+    instrument: document.getElementById("demoInstrument"),
+    currency: document.getElementById("demoCurrency"),
+    session: document.getElementById("demoSession"),
+    assets: document.getElementById("demoAssets"),
+    assetsNote: document.getElementById("demoAssetsNote"),
+    execution: document.getElementById("demoExecution"),
+    executionNote: document.getElementById("demoExecutionNote"),
+    gate: document.getElementById("demoGate"),
+    gateNote: document.getElementById("demoGateNote")
+  };
+
+  function selectMarket(code) {
+    const data = marketData[code];
+    if (!data) return;
+
+    Object.keys(fields).forEach(function (key) {
+      if (fields[key]) fields[key].textContent = data[key];
+    });
+
+    document.querySelectorAll(".demo-market-tab").forEach(function (button) {
+      const active = button.getAttribute("data-market") === code;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  document.querySelectorAll(".demo-market-tab").forEach(function (button) {
+    button.addEventListener("click", function () {
+      selectMarket(button.getAttribute("data-market"));
+    });
+  });
+
+  selectMarket("IN");
+})();
+</script>
+<!-- GREEXORA_MULTI_MARKET_DEMO_SCRIPT_END -->
+
 </body>
 </html>
