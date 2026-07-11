@@ -22,7 +22,7 @@
         "name": "Greexora",
         "alternateName": ["QuantX India", "QuantX"],
         "url": "https://quantx-india.com/",
-        "description": "Greexora is a professional Indian options and futures trading platform."
+        "description": "Greexora is a professional multi-market trading intelligence platform."
       },
       {
         "@type": "WebSite",
@@ -41,7 +41,7 @@
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Web",
         "url": "https://quantx-india.com/",
-        "description": "Greexora is a professional Indian options and futures trading platform for NIFTY and BANKNIFTY analysis, market intelligence, risk tools, and compliant trading workflows.",
+        "description": "Greexora is a professional multi-market trading intelligence platform for multi-market analysis, market intelligence, risk tools, paper trading, and compliant execution workflows.",
         "publisher": {
           "@id": "https://quantx-india.com/#organization"
         }
@@ -56,7 +56,7 @@
 
 <!-- GREEXORA_SEARCH_PREVIEW_START -->
 
-<meta property="og:title" content="Greexora | Professional Indian Options & Futures Trading Platform">
+<meta property="og:title" content="Greexora | Professional Multi-Market Trading Intelligence Platform">
 <meta property="og:description" content="Greexora is a professional analytics, charting, strategy-planning, risk-management, paper-trading, journaling, backtesting, and broker-execution support platform.">
 <meta property="og:image" content="https://quantx-india.com/assets/greexora-og.png">
 <meta property="og:image:width" content="1200">
@@ -65,7 +65,7 @@
 <meta property="og:type" content="website">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Greexora | Professional Indian Options & Futures Trading Platform">
+<meta name="twitter:title" content="Greexora | Professional Multi-Market Trading Intelligence Platform">
 <meta name="twitter:description" content="Analytics, charting, option-chain intelligence, risk management, paper trading, journaling, backtesting, and broker-execution support.">
 <meta name="twitter:image" content="https://quantx-india.com/assets/greexora-og.png">
 <!-- GREEXORA_SEARCH_PREVIEW_END -->
@@ -76,19 +76,36 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
-  <header class="site-header"><div class="container nav"><a class="brand" href="index.html"><img src="../assets/greexora-mark.svg" alt="Greexora logo mark"> GREEXORA</a><nav class="nav-links"><a href="index.html">Home</a><a href="#tradingview">TradingView-safe charting</a><a href="#market-data">Market data</a><a href="#risk">Risk</a>
+  <header class="site-header"><div class="container nav"><a class="brand" href="index.html"><img src="../assets/greexora-mark.svg" alt="Greexora logo mark"> GREEXORA</a><nav class="nav-links"><a href="index.html">Home</a><a href="markets.html">Markets</a><a href="#tradingview">TradingView-safe charting</a><a href="#market-data">Market data</a><a href="#risk">Risk</a>
         <a href="demo.html">Demo</a>
     <a href="early-access.html" class="btn btn-primary">Early Access</a></nav></div></header>
   <main>
     <section class="hero"><div class="container"><div class="eyebrow">Compliance and public positioning</div><h1>Greexora Compliance</h1><p class="lead">This page defines the public compliance position for Greexora’s charting, data, broker integration, risk, AI, and execution-support features.</p></div></section>
     <section id="tradingview"><div class="container"><div class="section-heading"><h2>TradingView-safe charting position</h2><p class="sub">Greexora should describe its charting as an internal professional charting system unless a formal TradingView agreement exists.</p></div><div class="compliance-list"><div class="check"><strong>No implied affiliation</strong><p>Greexora is not affiliated with TradingView unless explicitly stated under a formal agreement.</p></div><div class="check"><strong>No unauthorised claims</strong><p>Do not use phrases such as TradingView-powered, official TradingView charts, or TradingView integrated unless approval is obtained.</p></div><div class="check"><strong>Approved library use only</strong><p>Any open-source charting component must be used according to its license and attribution requirements.</p></div><div class="check"><strong>Advanced libraries only after approval</strong><p>TradingView Advanced Charts or Trading Platform libraries must only be used after formal approval and under permitted terms.</p></div></div></div></section>
     <section id="market-data"><div class="container"><div class="section-heading"><h2>Market data and broker API policy</h2><p class="sub">Greexora must use approved broker APIs, licensed market-data vendors, exchange-authorised sources, or other legally permitted data sources.</p></div><div class="grid"><article class="card"><h3>Permitted data path</h3><p>Broker API, approved exchange feed, authorised vendor, or legally permitted historical/source data.</p></article><article class="card"><h3>Not permitted</h3><p>No scraped TradingView data, no personal TradingView subscription data, and no use of browser sessions as backend data sources.</p></article><article class="card"><h3>Audit requirement</h3><p>Maintain data-source records, API permissions, vendor licenses, and rate-limit notes.</p></article></div></div></section>
-    <section id="risk"><div class="container"><div class="section-heading"><h2>Trading risk and execution safeguards</h2><p class="sub">Greexora must remain a decision-support and execution-support platform, not a guaranteed-profit system.</p></div><div class="grid"><article class="card"><h3>Paper mode default</h3><p>Paper trading should remain enabled by default before live execution is allowed.</p></article><article class="card"><h3>Manual live confirmation</h3><p>Every live order must require final user confirmation. No silent live execution.</p></article><article class="card"><h3>No misleading claims</h3><p>Avoid guaranteed, sure-shot, fixed profit, 100% accuracy, risk-free, or automatic profit claims.</p></article></div></div></section>
+
+<!-- GREEXORA_MULTI_MARKET_COMPLIANCE_START -->
+<section id="multi-market-controls">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Multi-market rollout controls</h2>
+      <p class="sub">Each market must be validated independently. Passing checks in one market does not authorise live activity in another.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><h3>Market-specific approval</h3><p>Data permissions, broker access, sessions, instruments, fees, currencies, order behaviour, and local requirements must be documented for each market.</p></article>
+      <article class="card"><h3>Paper evidence gate</h3><p>Historical data, paper orders, fills, slippage, stops, targets, positions, P&amp;L, reconciliation, failure tests, and recovery must pass before live readiness.</p></article>
+      <article class="card"><h3>Explicit activation</h3><p>Live broker adapters remain disabled until the relevant market passes validation and the user provides an explicit activation approval.</p></article>
+    </div>
+  </div>
+</section>
+<!-- GREEXORA_MULTI_MARKET_COMPLIANCE_END -->
+
+<section id="risk"><div class="container"><div class="section-heading"><h2>Trading risk and execution safeguards</h2><p class="sub">Greexora must remain a decision-support and execution-support platform, not a guaranteed-profit system.</p></div><div class="grid"><article class="card"><h3>Paper mode default</h3><p>Paper trading remains the default. Live execution stays disabled for each market until market-specific validation, reconciliation, failure testing, recovery evidence, and explicit user approval are complete.</p></article><article class="card"><h3>Manual live confirmation</h3><p>Every live order must require final user confirmation. No silent live execution.</p></article><article class="card"><h3>No misleading claims</h3><p>Avoid guaranteed, sure-shot, fixed profit, 100% accuracy, risk-free, or automatic profit claims.</p></article></div></div></section>
     <section><div class="container notice"><strong>Website footer disclosure:</strong> Greexora is an analytics, charting, strategy-planning, risk-management, paper-trading, journaling, backtesting, and broker-execution support platform. Greexora does not guarantee profits, does not eliminate trading risk, and does not provide risk-free trading outcomes. All trading decisions, live order confirmations, and risk responsibility remain with the user. Greexora is not affiliated with TradingView unless explicitly stated under a formal agreement.</div></section>
   </main>
   <footer class="footer">
     <div class="container footer-grid">
-      <div><strong>GREEXORA</strong><p>Professional intelligence for Indian derivatives trading.</p></div>
+      <div><strong>GREEXORA</strong><p>Professional intelligence for global multi-market trading.</p></div>
       <div><p><a href="index.html">Home</a> ·
 <a href="compliance.html">Compliance</a><a href="third-party-licenses.html">Licenses</a> · <a href="terms-risk-disclosure.html">Terms and risk disclosure</a> · <a href="privacy.html">Privacy</a> · <a href="third-party-licenses.html">Third-Party Licenses</a></p></div>
     </div>

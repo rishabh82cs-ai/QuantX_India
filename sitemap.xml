@@ -5,4 +5,9 @@
   <url><loc>https://quantx-india.com/demo.html</loc></url>
   <url><loc>https://quantx-india.com/early-access.html</loc></url>
   <url><loc>https://quantx-india.com/compliance.html</loc></url>
+  <url>
+  <loc>https://quantx-india.com/markets.html</loc>
+  <priority>0.9</priority>
+  </url>
+
 </urlset>
