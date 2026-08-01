@@ -149,6 +149,143 @@ th { color: #d8e8ff; font-weight: 700; background: rgba(255,255,255,0.06); }
 }
 /* GREEXORA_MULTI_MARKET_STYLES_END */
 
+/* GREEXORA_PUBLIC_ROADMAP_STYLES_START */
+.roadmap-preview,
+.roadmap-section {
+  background:
+    radial-gradient(circle at 88% 8%, rgba(24, 178, 107, .12), transparent 26%),
+    linear-gradient(180deg, #f7fbf9, #ffffff);
+}
+.roadmap-preview-grid,
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.roadmap-preview-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.roadmap-preview-card,
+.roadmap-stage {
+  border: 1px solid var(--gx-border);
+  border-radius: 22px;
+  background: #ffffff;
+  padding: 24px;
+  box-shadow: 0 12px 34px rgba(11, 27, 51, .07);
+}
+.roadmap-preview-card h3,
+.roadmap-stage h3,
+.roadmap-preview-callout h3 {
+  margin: 14px 0 8px;
+  color: var(--gx-navy);
+  font-size: 21px;
+}
+.roadmap-preview-card p,
+.roadmap-stage > p,
+.roadmap-preview-callout p {
+  color: var(--gx-muted);
+}
+.roadmap-number {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--gx-navy);
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: .05em;
+}
+.roadmap-stage-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.roadmap-stage-current {
+  border-color: #9fd0b1;
+  box-shadow: 0 14px 38px rgba(24, 178, 107, .12);
+}
+.status-planned {
+  color: #245f83;
+  background: #edf7fd;
+  border-color: #bfdaeb;
+}
+.status-future {
+  color: #745119;
+  background: #fff8e8;
+  border-color: #ecd7a7;
+}
+.status-long-term {
+  color: #5a4b76;
+  background: #f5f1fb;
+  border-color: #d9ccec;
+}
+.roadmap-benefit {
+  margin: 20px 0 0;
+  padding: 14px 15px;
+  border-left: 4px solid var(--gx-green);
+  border-radius: 0 12px 12px 0;
+  background: #f2faf5;
+}
+.roadmap-preview-callout { margin-top: 26px; }
+.roadmap-preview-callout h3 { font-size: 24px; }
+.roadmap-preview-callout .eyebrow { margin-bottom: 0; }
+.roadmap-hero h1 { font-size: clamp(40px, 5.4vw, 67px); }
+.roadmap-hero-card h2 {
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: clamp(28px, 3vw, 39px);
+}
+.roadmap-hero-card > p:not(.eyebrow) { color: #cbd5e1; }
+.roadmap-principles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.roadmap-principles span {
+  border: 1px solid #cfe1d6;
+  border-radius: 999px;
+  background: #ffffff;
+  padding: 10px 14px;
+  color: #29415e;
+  font-weight: 800;
+}
+.roadmap-principles-dark { margin-top: 24px; }
+.roadmap-principles-dark span {
+  border-color: rgba(255, 255, 255, .18);
+  background: rgba(255, 255, 255, .08);
+  color: #ffffff;
+}
+.roadmap-target-section {
+  background: var(--gx-navy);
+  color: #d7e3f0;
+}
+.roadmap-targets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.roadmap-targets > div {
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .06);
+  padding: 28px;
+}
+.roadmap-targets h2 { color: #ffffff; font-size: clamp(28px, 3.3vw, 42px); }
+.roadmap-targets p:last-child { margin-bottom: 0; color: #cbd5e1; }
+@media (max-width: 1050px) {
+  .roadmap-preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .roadmap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 650px) {
+  .roadmap-preview-grid,
+  .roadmap-grid,
+  .roadmap-targets { grid-template-columns: 1fr; }
+  .roadmap-stage-top { align-items: flex-start; }
+}
+/* GREEXORA_PUBLIC_ROADMAP_STYLES_END */
+
 /* GREEXORA_MULTI_MARKET_DEMO_STYLES_START */
 .demo-multi-market {
   padding: 54px 0;
