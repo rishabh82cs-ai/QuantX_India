@@ -1,570 +1,156 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Greexora Demo | Multi-Market Trading Platform Preview</title>
-  <meta name="description" content="Explore Greexora’s simulated India-oriented workflow and its paper-trading-first multi-market roadmap for the United States, Australia, Forex, and the UAE.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greexora Preview | Paper-First Financial Decision Support</title>
+  <meta name="description" content="Preview Greexora's intended paper-first customer experience for clearer financial context, disciplined decisions, and ongoing learning.">
   <link rel="canonical" href="https://quantx-india.com/demo.html">
   <meta property="og:site_name" content="Greexora">
-  <meta property="og:title" content="Greexora Demo | Multi-Market Trading Platform Preview">
-  <meta property="og:description" content="Explore Greexora's simulated India-oriented workflow and its paper-trading-first multi-market roadmap for the United States, Australia, Forex, and the UAE.">
+  <meta property="og:title" content="Greexora Public Product Preview">
+  <meta property="og:description" content="A customer-focused preview of Greexora's intended paper-first experience across five market regions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://quantx-india.com/demo.html">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Greexora Demo | Multi-Market Trading Platform Preview">
-  <meta name="twitter:description" content="Explore Greexora's simulated India-oriented workflow and its paper-trading-first multi-market roadmap for the United States, Australia, Forex, and the UAE.">
-  <script type="application/ld+json" id="greexora-schema">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://quantx-india.com/#organization",
-        "name": "Greexora",
-        "alternateName": ["QuantX India", "QuantX"],
-        "url": "https://quantx-india.com/",
-        "description": "Greexora is a professional multi-market trading intelligence platform."
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://quantx-india.com/#website",
-        "name": "Greexora",
-        "alternateName": "QuantX India",
-        "url": "https://quantx-india.com/",
-        "publisher": {
-          "@id": "https://quantx-india.com/#organization"
-        }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://quantx-india.com/#software",
-        "name": "Greexora",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "url": "https://quantx-india.com/",
-        "description": "Greexora is a professional multi-market trading intelligence platform for multi-market analysis, market intelligence, risk tools, paper trading, and compliant execution workflows.",
-        "publisher": {
-          "@id": "https://quantx-india.com/#organization"
-        }
-      }
-    ]
-  }
-  </script>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="demo.css" />
-
-<!-- GREEXORA_SEARCH_PREVIEW_START -->
-
-<meta property="og:title" content="Greexora | Professional Multi-Market Trading Intelligence Platform">
-<meta property="og:description" content="Greexora is a professional analytics, charting, strategy-planning, risk-management, paper-trading, journaling, backtesting, and broker-execution support platform.">
-<meta property="og:image" content="https://quantx-india.com/assets/greexora-og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://quantx-india.com/">
-<meta property="og:type" content="website">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Greexora | Professional Multi-Market Trading Intelligence Platform">
-<meta name="twitter:description" content="Analytics, charting, option-chain intelligence, risk management, paper trading, journaling, backtesting, and broker-execution support.">
-<meta name="twitter:image" content="https://quantx-india.com/assets/greexora-og.png">
-<!-- GREEXORA_SEARCH_PREVIEW_END -->
-
+  <meta property="og:image" content="https://quantx-india.com/assets/greexora-og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Greexora Public Product Preview">
+  <meta name="twitter:description" content="Clearer context, disciplined paper evaluation, and ongoing learning.">
+  <meta name="twitter:image" content="https://quantx-india.com/assets/greexora-og.png">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
   <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<!-- GREEXORA_MULTI_MARKET_DEMO_STYLE_START -->
-<style>
-.demo-market-notice{max-width:1440px;margin:18px auto 0;padding:0 24px}
-.gx-demo-market-notice{border:1px solid rgba(24,178,107,.35);border-radius:18px;background:rgba(24,178,107,.10);padding:16px 18px;color:inherit;line-height:1.55}
-.gx-demo-market-notice strong{color:#18b26b}
-@media(max-width:640px){.demo-market-notice{padding:0 14px}.gx-demo-market-notice{padding:14px}}
-</style>
-<!-- GREEXORA_MULTI_MARKET_DEMO_STYLE_END -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Greexora Public Product Preview",
+    "url": "https://quantx-india.com/demo.html",
+    "dateModified": "2026-08-01",
+    "description": "A customer-focused preview of Greexora's intended paper-first financial and market decision-support experience."
+  }
+  </script>
 </head>
 <body>
-  <div class="top-risk-bar">
-    <strong>Demo mode:</strong> All prices, candles, orders, alerts, journals, and analytics on this page are simulated for product demonstration only. No market data feed or live broker execution is connected.
-  </div>
-
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Greexora home">
-      <img src="assets/greexora-logo.svg" alt="Greexora logo" />
-    </a>
-    <nav class="nav">
-      <a href="index.html">Home</a><a href="markets.html">Markets</a>
-        <a href="demo.html">Demo</a>
-      <a href="compliance.html">Compliance</a>
-      <a href="terms-risk-disclosure.html">Risk</a>
-      <a href="third-party-licenses.html">Licenses</a>
-    </nav>
+    <div class="container nav">
+      <a class="brand" href="index.html"><img src="assets/greexora-mark.svg" alt="Greexora logo mark"> GREEXORA</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#features">Features</a>
+        <a href="markets.html">Markets</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="demo.html" aria-current="page">Preview</a>
+        <a href="compliance.html">Compliance</a>
+        <a href="early-access.html" class="btn btn-primary">Early Access</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-
-<!-- GREEXORA_MULTI_MARKET_DEMO_NOTICE_START -->
-<section class="demo-market-notice" aria-label="Multi-market development notice">
-  <div class="gx-demo-market-notice">
-    <strong>Multi-market development notice:</strong> Greexora is expanding toward India, the United States, Australia, Forex, and UAE workflows. The current public demo is simulated and does not represent live data, live broker connectivity, or completed availability in every market.
-  </div>
-</section>
-<!-- GREEXORA_MULTI_MARKET_DEMO_NOTICE_END -->
-
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Interactive simulated platform preview</p>
-        <h1>Greexora Demo</h1>
-        <p class="lead">A detailed simulated preview of Greexora’s market-neutral workflow across India, the United States, Australia, Forex, and the UAE: choose a market, inspect professional charts and analytics, prepare a risk-checked order, paper trade it, reconcile the result, and generate an AI-assisted journal entry.</p>
-        <div class="hero-actions">
-          <button class="primary" data-scroll="workspace">Open demo workspace</button>
-          <button class="secondary" data-scroll="module-map">View all modules</button>
+    <section class="hero roadmap-hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Public product preview · paper-first</p>
+          <h1>Clearer context for more disciplined decisions.</h1>
+          <p class="lead">Greexora is being developed to help people understand relevant financial and market information, organise their thinking, practise decisions on paper, and learn from the result.</p>
+          <div class="hero-actions">
+            <a href="#intended-value" class="btn btn-primary">See the customer experience</a>
+            <a href="roadmap.html" class="btn btn-secondary">View the roadmap</a>
+          </div>
         </div>
+        <aside class="hero-card roadmap-hero-card" aria-label="Greexora public preview status">
+          <p class="eyebrow">Current public position</p>
+          <h2>A concept in responsible development.</h2>
+          <p>This preview describes intended customer outcomes. It does not expose confidential implementation details or represent a finished financial service.</p>
+          <div class="roadmap-principles roadmap-principles-dark">
+            <span>In development</span>
+            <span>Paper-only</span>
+            <span>Simulated experience</span>
+            <span>No real orders</span>
+          </div>
+        </aside>
       </div>
-      <div class="hero-card">
-        <div class="status-grid">
-          <div><span>Mode</span><strong>Paper / Demo</strong></div>
-          <div><span>Live orders</span><strong>Disabled</strong></div>
-          <div><span>Data source</span><strong>Simulated</strong></div>
-          <div><span>TradingView status</span><strong>No affiliation claim</strong></div>
+    </section>
+
+    <section id="intended-value" class="roadmap-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Intended customer value</p>
+          <h2>One experience built around clarity, discipline, and learning.</h2>
+          <p class="sub">The public preview stays focused on what Greexora aims to help customers achieve. Detailed methods remain confidential while intellectual-property, security, and compliance work continues.</p>
+        </div>
+        <div class="roadmap-preview-grid roadmap-value-grid">
+          <article class="roadmap-preview-card"><span class="roadmap-number">01</span><h3>Understand the picture</h3><p>Bring important financial and market context into a clearer, more structured view.</p></article>
+          <article class="roadmap-preview-card"><span class="roadmap-number">02</span><h3>Set direction</h3><p>Support clearer priorities, trade-offs, and risk-aware decision habits.</p></article>
+          <article class="roadmap-preview-card"><span class="roadmap-number">03</span><h3>Practise on paper</h3><p>Explore intended experiences in a simulated setting without using real capital.</p></article>
+          <article class="roadmap-preview-card"><span class="roadmap-number">04</span><h3>Review and learn</h3><p>Encourage reflection, better questions, and continuous improvement over time.</p></article>
         </div>
       </div>
     </section>
 
-
-<!-- GREEXORA_MULTI_MARKET_DEMO_WORKSPACE_START -->
-<section id="multi-market-demo" class="demo-multi-market">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">Interactive simulated market selector</p>
-      <h2>Preview the same Greexora workflow across five market regions.</h2>
-      <p class="sub">Choose a market to update the simulated session, currency, instrument, asset coverage, and validation gate. No live data or broker connection is used.</p>
-    </div>
-
-    <div class="demo-market-tabs" role="tablist" aria-label="Greexora demo markets">
-      <button type="button" class="demo-market-tab is-active" data-market="IN" aria-pressed="true">
-        <span class="demo-market-flag">IN</span>
-        <span><strong>India</strong><small>NSE · BSE</small></span>
-      </button>
-      <button type="button" class="demo-market-tab" data-market="US" aria-pressed="false">
-        <span class="demo-market-flag">US</span>
-        <span><strong>United States</strong><small>NYSE · Nasdaq · Cboe</small></span>
-      </button>
-      <button type="button" class="demo-market-tab" data-market="AU" aria-pressed="false">
-        <span class="demo-market-flag">AU</span>
-        <span><strong>Australia</strong><small>ASX-oriented</small></span>
-      </button>
-      <button type="button" class="demo-market-tab" data-market="FX" aria-pressed="false">
-        <span class="demo-market-flag">FX</span>
-        <span><strong>Forex</strong><small>24×5 currency pairs</small></span>
-      </button>
-      <button type="button" class="demo-market-tab" data-market="AE" aria-pressed="false">
-        <span class="demo-market-flag">AE</span>
-        <span><strong>UAE</strong><small>ADX · DFM</small></span>
-      </button>
-    </div>
-
-    <div class="demo-market-workspace" aria-live="polite">
-      <div class="demo-market-summary">
-        <div>
-          <span class="demo-label">Selected market</span>
-          <strong id="demoMarketName">India</strong>
-        </div>
-        <div>
-          <span class="demo-label">Example instrument</span>
-          <strong id="demoInstrument">NIFTY index option</strong>
-        </div>
-        <div>
-          <span class="demo-label">Currency</span>
-          <strong id="demoCurrency">INR</strong>
-        </div>
-        <div>
-          <span class="demo-label">Session model</span>
-          <strong id="demoSession">Asia/Kolkata exchange session</strong>
+    <section>
+      <div class="container">
+        <div class="roadmap-callout">
+          <div>
+            <p class="eyebrow">A simple customer journey</p>
+            <h2>From context to paper learning.</h2>
+            <p>The intended experience helps a customer move from understanding relevant context to making a considered paper decision and reviewing what they learned.</p>
+            <a class="btn btn-primary" href="early-access.html">Join early access</a>
+          </div>
+          <div class="roadmap-steps" aria-label="Intended customer journey">
+            <span>1 · Understand relevant context</span>
+            <span>2 · Clarify priorities and trade-offs</span>
+            <span>3 · Consider risk and uncertainty</span>
+            <span>4 · Practise in paper mode</span>
+            <span>5 · Review and learn</span>
+          </div>
         </div>
       </div>
-
-      <div class="demo-market-detail-grid">
-        <article class="demo-market-detail">
-          <span class="demo-detail-kicker">Asset coverage</span>
-          <h3 id="demoAssets">Indices, equities, options and futures</h3>
-          <p id="demoAssetsNote">NSE and BSE-oriented simulated instruments with expiry, strike, lot-size, tick-size, and INR fee handling.</p>
-        </article>
-
-        <article class="demo-market-detail">
-          <span class="demo-detail-kicker">Paper execution model</span>
-          <h3 id="demoExecution">Order → fill → position → P&amp;L</h3>
-          <p id="demoExecutionNote">Simulated orders include partial fills, slippage, fees, stop/target handling, and an execution ledger.</p>
-        </article>
-
-        <article class="demo-market-detail">
-          <span class="demo-detail-kicker">Live-readiness gate</span>
-          <h3 id="demoGate">India paper-validation gate</h3>
-          <p id="demoGateNote">Live execution remains disabled until data, risk, reconciliation, failure, and recovery checks pass and explicit approval is provided.</p>
-        </article>
-      </div>
-
-      <div class="demo-paper-strip">
-        <span class="status-dot" aria-hidden="true"></span>
-        <strong>Paper / Demo mode</strong>
-        <span>Simulated data</span>
-        <span>Live orders disabled</span>
-        <span>Manual approval required</span>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- GREEXORA_MULTI_MARKET_DEMO_WORKSPACE_END -->
-
-<section id="workspace" class="workspace">
-      <aside class="sidebar">
-        <h2>Control Panel</h2>
-        <label>
-          Asset universe
-          <select id="universeSelect">
-            <option value="indexOptions">Index Options</option>
-            <option value="stockOptions">Stock Options</option>
-            <option value="indexFutures">Index Futures</option>
-            <option value="stockFutures">Stock Futures</option>
-            <option value="currencyFutures">Currency Futures</option>
-            <option value="commodityFutures">Commodity Futures</option>
-          </select>
-        </label>
-        <label>
-          Instrument
-          <select id="instrumentSelect"></select>
-        </label>
-        <label>
-          Expiry
-          <select id="expirySelect">
-            <option>Weekly</option>
-            <option>Monthly</option>
-            <option>Next Monthly</option>
-          </select>
-        </label>
-        <div class="control-row">
-          <label>
-            Interval
-            <select id="intervalSelect">
-              <option>1m</option>
-              <option>3m</option>
-              <option selected>5m</option>
-              <option>15m</option>
-              <option>30m</option>
-              <option>1h</option>
-              <option>1D</option>
-            </select>
-          </label>
-          <label>
-            Days
-            <input id="daysInput" type="number" value="5" min="1" max="60" />
-          </label>
-        </div>
-        <label>
-          Chart mode
-          <select id="chartMode">
-            <option value="hollow" selected>Hollow candles</option>
-            <option value="classic">Classic candles</option>
-            <option value="line">Line chart</option>
-            <option value="bar">Bar chart</option>
-          </select>
-        </label>
-        <label>
-          Market scenario
-          <select id="scenarioSelect">
-            <option value="bullish">Bullish breakout</option>
-            <option value="bearish">Bearish rejection</option>
-            <option value="range" selected>Range / neutral</option>
-            <option value="volatile">High IV volatile</option>
-          </select>
-        </label>
-        <button id="refreshDemo" class="primary full">Refresh simulated data</button>
-        <div class="small-note">Controls are interactive and update simulated demo panels. The market selector above changes market-specific context; no control connects to live market data or a broker.</div>
-      </aside>
-
-      <section class="main-panel">
-        <div class="tabs" role="tablist" aria-label="Greexora demo modules">
-          <button class="tab active" data-tab="dashboard">Dashboard</button>
-          <button class="tab" data-tab="chart">Charts</button>
-          <button class="tab" data-tab="options">Options</button>
-          <button class="tab" data-tab="futures">Futures</button>
-          <button class="tab" data-tab="strategy">Strategy</button>
-          <button class="tab" data-tab="orders">Orders</button>
-          <button class="tab" data-tab="journal">AI Journal</button>
-          <button class="tab" data-tab="backtest">Backtest</button>
-          <button class="tab" data-tab="alerts">Alerts</button>
-          <button class="tab" data-tab="compliance">Compliance</button>
-        </div>
-
-        <div class="tab-content active" id="dashboard">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Live workspace preview</p>
-              <h2>Dashboard</h2>
-            </div>
-            <span class="badge safe">Paper mode default</span>
-          </div>
-          <div class="metric-grid" id="metricGrid"></div>
-          <div class="two-col">
-            <div class="card">
-              <h3>Market intelligence summary</h3>
-              <div id="aiSummary" class="ai-box"></div>
-            </div>
-            <div class="card">
-              <h3>Current workflow status</h3>
-              <ul class="check-list">
-                <li>Instrument model uses market → exchange or venue → asset class → underlying or pair → instrument type → expiry or tenor → contract.</li>
-                <li>Charting is described as an internal professional charting system.</li>
-                <li>Order workflow is paper-first and manual-confirmation-first.</li>
-                <li>No guarantee, risk-free, or sure-shot wording is used in the demo.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="chart">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">Professional internal charting preview</p>
-              <h2>Chart, candles, patterns, and price action</h2>
-            </div>
-            <button id="toggleOverlays" class="secondary">Toggle overlays</button>
-          </div>
-          <div class="chart-shell">
-            <div class="chart-toolbar">
-              <span id="chartTitle">Instrument chart</span>
-              <span id="chartStats"></span>
-            </div>
-            <svg id="candleChart" viewBox="0 0 980 430" role="img" aria-label="Simulated Greexora chart"></svg>
-          </div>
-          <div class="three-col">
-            <div class="card"><h3>Detected candle patterns</h3><div id="patternList"></div></div>
-            <div class="card"><h3>Price-action reading</h3><div id="priceActionList"></div></div>
-            <div class="card"><h3>Chart controls included</h3><ul class="compact"><li>Hollow candles</li><li>Classic candles</li><li>Line/bar modes</li><li>Volume pane</li><li>Entry, stop, target markers</li><li>Support/resistance zones</li></ul></div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="options">
-          <div class="section-head"><div><p class="eyebrow">Options intelligence</p><h2>Option-chain analytics</h2></div><span class="badge">Simulated strikes</span></div>
-          <div class="metric-grid small" id="optionMetrics"></div>
-          <div class="table-wrap"><table id="optionTable"></table></div>
-          <p class="small-note">The demo option chain shows structure only: CE/PE LTP, OI, OI change, IV, Delta, Gamma, bid/ask, ATM row, OI pressure, and support/resistance zones.</p>
-        </div>
-
-        <div class="tab-content" id="futures">
-          <div class="section-head"><div><p class="eyebrow">Futures intelligence</p><h2>Futures analytics</h2></div><span class="badge">Simulated contracts</span></div>
-          <div class="metric-grid small" id="futuresMetrics"></div>
-          <div class="table-wrap"><table id="futuresTable"></table></div>
-          <div class="two-col">
-            <div class="card"><h3>Rollover view</h3><div id="rolloverBars"></div></div>
-            <div class="card"><h3>Basis explanation</h3><p id="basisText"></p></div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="strategy">
-          <div class="section-head"><div><p class="eyebrow">Strategy advisor</p><h2>Strategy planning and advisor</h2></div><button id="runAdvisor" class="primary">Run advisor</button></div>
-          <div class="strategy-layout">
-            <div class="card strategy-card"><h3>Advisor output</h3><div id="strategyOutput"></div></div>
-            <div class="card"><h3>Strategy builder</h3><div id="strategyBuilder"></div></div>
-          </div>
-          <div class="card"><h3>Decision inputs</h3><div class="pill-grid" id="decisionInputs"></div></div>
-        </div>
-
-        <div class="tab-content" id="orders">
-          <div class="section-head"><div><p class="eyebrow">Risk-first execution workflow</p><h2>One-click order and bracket order demo</h2></div><span class="badge danger">Live execution disabled in demo</span></div>
-          <div class="order-layout">
-            <form id="orderForm" class="card order-form">
-              <h3>Pre-filled order ticket</h3>
-              <label>Order side<select id="orderSide"><option>Buy</option><option>Sell</option></select></label>
-              <label>Instrument type<select id="orderType"><option>Option</option><option>Future</option><option>Strategy Basket</option></select></label>
-              <label>Strategy<select id="orderStrategy"><option>Bull Call Spread</option><option>Bear Put Spread</option><option>Long Call</option><option>Long Put</option><option>Iron Condor</option><option>Futures Long</option><option>Futures Short</option></select></label>
-              <div class="control-row"><label>Entry<input id="entryPrice" type="number" step="0.05" /></label><label>Quantity<input id="qty" type="number" min="1" value="50" /></label></div>
-              <div class="control-row"><label>Stop loss<input id="stopLoss" type="number" step="0.05" /></label><label>Target<input id="targetPrice" type="number" step="0.05" /></label></div>
-              <label>Trailing stop<select id="trailing"><option>Disabled</option><option>After Target 1</option><option>1.5x risk trail</option></select></label>
-              <div class="order-buttons"><button type="button" id="paperTrade" class="primary">Place paper trade</button><button type="button" id="liveConfirm" class="secondary">Request live confirmation</button></div>
-            </form>
-            <div class="card"><h3>Risk engine output</h3><div id="riskOutput"></div></div>
-          </div>
-          <div class="card"><h3>Tradebook preview</h3><div class="table-wrap"><table id="tradebookTable"></table></div></div>
-        </div>
-
-        <div class="tab-content" id="journal">
-          <div class="section-head"><div><p class="eyebrow">AI-assisted journaling</p><h2>Trade journal preview</h2></div><button id="generateJournal" class="secondary">Generate sample journal</button></div>
-          <div class="journal-grid">
-            <div class="card"><h3>Latest AI journal entry</h3><div id="journalEntry" class="ai-box long"></div></div>
-            <div class="card"><h3>EOD review</h3><div id="eodReview"></div></div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="backtest">
-          <div class="section-head"><div><p class="eyebrow">Testing before live trading</p><h2>Backtesting and replay demo</h2></div><button id="runBacktest" class="primary">Run simulated backtest</button></div>
-          <div class="backtest-controls card">
-            <label>Strategy<select id="backtestStrategy"><option>Pattern + price action</option><option>Option-chain breakout</option><option>Iron Condor range</option><option>Futures basis trend</option></select></label>
-            <label>Trades<input id="backtestTrades" type="range" min="20" max="250" value="80" /></label>
-            <label>Risk per trade %<input id="riskPerTrade" type="range" min="0.25" max="3" step="0.25" value="1" /></label>
-          </div>
-          <div class="metric-grid small" id="backtestMetrics"></div>
-          <svg id="equityCurve" viewBox="0 0 980 240" class="equity-chart" aria-label="Simulated equity curve"></svg>
-        </div>
-
-        <div class="tab-content" id="alerts">
-          <div class="section-head"><div><p class="eyebrow">Alerts and notifications</p><h2>Alert engine demo</h2></div><button id="addAlert" class="primary">Add sample alert</button></div>
-          <div class="alert-layout">
-            <div class="card"><h3>Active alerts</h3><div id="alertsList"></div></div>
-            <div class="card"><h3>Alert types</h3><ul class="compact"><li>Price alerts</li><li>Breakout/breakdown alerts</li><li>Pattern alerts</li><li>Strategy category alerts</li><li>Risk alerts</li><li>Journal reminders</li><li>News and event warnings</li></ul></div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="compliance">
-          <div class="section-head"><div><p class="eyebrow">Approval-friendly presentation</p><h2>Compliance controls shown in demo</h2></div><span class="badge safe">TradingView-safe wording</span></div>
-          <div class="compliance-grid">
-            <div class="card"><h3>Charting language</h3><p>Greexora uses “internal professional charting system” wording in this demo. It does not claim TradingView-powered charts, official TradingView integration, or TradingView affiliation.</p></div>
-            <div class="card"><h3>Data language</h3><p>All demo data is simulated. Production data should come from approved broker APIs, exchange-authorised data sources, or licensed vendors.</p></div>
-            <div class="card"><h3>Order language</h3><p>Paper mode is default for every market. Live activation is market-specific, requires completed validation and reconciliation evidence, and still requires explicit user confirmation. No silent live execution is shown or promised.</p></div>
-            <div class="card"><h3>Risk language</h3><p>No guaranteed profit, fixed return, sure-shot signal, or risk-free trading claims are made.</p></div>
-          </div>
-        </div>
-      </section>
     </section>
 
-    <section id="module-map" class="module-map">
-      <div class="section-head"><div><p class="eyebrow">Full product scope</p><h2>Greexora 40-module map</h2></div></div>
-      <div id="moduleGrid" class="module-grid"></div>
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Multi-market direction</p>
+          <h2>A consistent paper-first experience across five regions.</h2>
+          <p class="sub">Greexora is exploring customer experiences for India, the United States, Australia, Forex, and the UAE. Coverage and timing remain subject to research, testing, permissions, and readiness review.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><h3>Local context</h3><p>Market availability, sessions, currencies, permissions, and customer expectations are reviewed region by region.</p></article>
+          <article class="card"><h3>Consistent principles</h3><p>Clear information, paper-first evaluation, risk awareness, and responsible communication stay central.</p></article>
+          <article class="card"><h3>Evidence before expansion</h3><p>Broader paper access depends on successful testing and formal readiness decisions.</p></article>
+        </div>
+      </div>
     </section>
 
-    <section class="closing-cta">
-      <h2>Public demo purpose</h2>
-      <p>This page helps visitors understand the intended Greexora multi-market product experience while staying compliance-friendly. It is a simulated preview, not a live trading platform, market-data feed, or order-execution service.</p>
-      <a class="primary link-button" href="compliance.html">Read compliance policy</a>
+    <section class="roadmap-target-section">
+      <div class="container">
+        <div class="roadmap-targets">
+          <div>
+            <p class="eyebrow">Development target</p>
+            <h2>Paper evaluation · Q4 2026</h2>
+            <p>A guided paper experience is targeted for structured evaluation. This is a development target, not an availability guarantee.</p>
+          </div>
+          <div>
+            <p class="eyebrow">Public boundary</p>
+            <h2>No public live date</h2>
+            <p>No live trading service is currently offered. Any future proposal would require separate security, legal, compliance, and partner-readiness decisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container notice"><strong>Preview and risk notice:</strong> This page presents intended product direction and may change following research, testing, legal and regulatory review, and partner readiness. It is general product-development information—not personal financial advice, a recommendation, or an offer of a live trading service. Greexora does not guarantee investment performance, profits, returns, or financial outcomes.</div>
     </section>
   </main>
 
-  <div class="modal" id="liveModal" aria-hidden="true">
-    <div class="modal-panel">
-      <h2>Live trading confirmation gate</h2>
-      <p>This is a demo confirmation screen only. In production, live execution would require broker connection, user confirmation, risk acknowledgement, and broker/exchange/API compliance.</p>
-      <ul class="check-list"><li>Risk checked</li><li>Manual confirmation required</li><li>Audit log required</li><li>No silent execution</li></ul>
-      <button id="closeModal" class="primary">Close demo confirmation</button>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><strong>GREEXORA</strong><p>Professional intelligence for disciplined financial and market decisions.</p></div>
+      <div><p><a href="index.html">Home</a> · <a href="markets.html">Markets</a> · <a href="roadmap.html">Roadmap</a> · <a href="demo.html">Preview</a> · <a href="compliance.html">Compliance</a> · <a href="terms-risk-disclosure.html">Terms and risk disclosure</a> · <a href="privacy.html">Privacy</a></p></div>
     </div>
-  </div>
-
-  <footer class="site-footer">
-    <div><strong>Greexora</strong><span>Professional multi-market trading intelligence platform</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="compliance.html">Compliance</a>
-      <a href="third-party-licenses.html">Third-Party Licenses</a>
-      <a href="terms-risk-disclosure.html">Risk Disclosure</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
-    <p class="disclaimer">Greexora is an analytics, charting, strategy-planning, risk-management, paper-trading, journaling, backtesting, and broker-execution support platform. It does not guarantee profits, does not eliminate trading risk, and does not provide risk-free trading outcomes. Greexora is not affiliated with TradingView unless explicitly stated under a formal agreement.</p>
   </footer>
-  <script src="demo.js"></script>
-
-<!-- GREEXORA_MULTI_MARKET_DEMO_SCRIPT_START -->
-<script>
-(function () {
-  const marketData = {
-    IN: {
-      name: "India",
-      instrument: "NIFTY index option",
-      currency: "INR",
-      session: "Asia/Kolkata exchange session",
-      assets: "Indices, equities, options and futures",
-      assetsNote: "NSE and BSE-oriented simulated instruments with expiry, strike, lot-size, tick-size, and INR fee handling.",
-      execution: "Order → fill → position → P&L",
-      executionNote: "Simulated orders include partial fills, slippage, fees, stop/target handling, and an execution ledger.",
-      gate: "India paper-validation gate",
-      gateNote: "Live execution remains disabled until data, risk, reconciliation, failure, and recovery checks pass and explicit approval is provided."
-    },
-    US: {
-      name: "United States",
-      instrument: "SPY listed option",
-      currency: "USD",
-      session: "America/New_York regular and extended sessions",
-      assets: "Stocks, ETFs, listed options and futures-ready workflows",
-      assetsNote: "Simulated US instruments use exchange calendars, option contract multipliers, USD fees, and market-specific session handling.",
-      execution: "Broker-neutral US paper workflow",
-      executionNote: "The preview models US-style orders, fills, slippage, fees, positions, and a USD execution ledger without connecting to a broker.",
-      gate: "US paper-validation gate",
-      gateNote: "US live readiness stays disabled until authorised data and broker paths, risk controls, reconciliation, and recovery checks pass."
-    },
-    AU: {
-      name: "Australia",
-      instrument: "ASX 200 / equity workflow",
-      currency: "AUD",
-      session: "Australia/Sydney exchange session",
-      assets: "ASX-oriented equities and derivatives-ready workflows",
-      assetsNote: "Simulated Australian instruments use local sessions, AUD accounting, market-specific tick sizes, fees, and settlement context.",
-      execution: "AUD paper order and portfolio workflow",
-      executionNote: "Orders, fills, fees, positions, cash, and P&L are simulated with an Australian-market context and audit trail.",
-      gate: "Australia paper-validation gate",
-      gateNote: "Live activation stays disabled until the selected data and broker route passes paper execution, reconciliation, and failure testing."
-    },
-    FX: {
-      name: "Forex",
-      instrument: "EUR/USD currency pair",
-      currency: "Multi-currency",
-      session: "24×5 global session model",
-      assets: "Major, minor and selected cross-currency pairs",
-      assetsNote: "The simulated Forex model uses base/quote currencies, pip values, lot sizes, rollover context, and session-aware pricing.",
-      execution: "Pair-aware paper execution",
-      executionNote: "The preview models spread, slippage, order size, stop/target behaviour, currency conversion, and multi-currency P&L.",
-      gate: "Forex paper-validation gate",
-      gateNote: "Live Forex connectivity remains disabled until pricing, conversion, leverage, risk, reconciliation, and recovery controls pass."
-    },
-    AE: {
-      name: "United Arab Emirates",
-      instrument: "ADX / DFM equity workflow",
-      currency: "AED",
-      session: "Asia/Dubai local exchange session",
-      assets: "ADX and DFM-oriented equity coverage targets",
-      assetsNote: "Simulated UAE workflows use local sessions, AED accounting, venue identifiers, fees, and authorised-data requirements.",
-      execution: "AED paper order and ledger workflow",
-      executionNote: "The preview models orders, fills, positions, fees, cash, and P&L without representing current live broker availability.",
-      gate: "UAE paper-validation gate",
-      gateNote: "Live activation remains disabled until authorised data, broker access, local controls, reconciliation, and explicit approval are complete."
-    }
-  };
-
-  const fields = {
-    name: document.getElementById("demoMarketName"),
-    instrument: document.getElementById("demoInstrument"),
-    currency: document.getElementById("demoCurrency"),
-    session: document.getElementById("demoSession"),
-    assets: document.getElementById("demoAssets"),
-    assetsNote: document.getElementById("demoAssetsNote"),
-    execution: document.getElementById("demoExecution"),
-    executionNote: document.getElementById("demoExecutionNote"),
-    gate: document.getElementById("demoGate"),
-    gateNote: document.getElementById("demoGateNote")
-  };
-
-  function selectMarket(code) {
-    const data = marketData[code];
-    if (!data) return;
-
-    Object.keys(fields).forEach(function (key) {
-      if (fields[key]) fields[key].textContent = data[key];
-    });
-
-    document.querySelectorAll(".demo-market-tab").forEach(function (button) {
-      const active = button.getAttribute("data-market") === code;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-  }
-
-  document.querySelectorAll(".demo-market-tab").forEach(function (button) {
-    button.addEventListener("click", function () {
-      selectMarket(button.getAttribute("data-market"));
-    });
-  });
-
-  selectMarket("IN");
-})();
-</script>
-<!-- GREEXORA_MULTI_MARKET_DEMO_SCRIPT_END -->
-
 </body>
 </html>
