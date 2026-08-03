@@ -1,10 +1,10 @@
 # Greexora
 
-Greexora is a professional Indian options and futures trading platform for NIFTY and BANKNIFTY traders.
+Greexora is an independent India-first project developing a paper-first financial and market decision-support experience.
 
 Website: https://quantx-india.com/
 
-Greexora focuses on option-chain analysis, market intelligence, risk workflows, trading tools, compliance-aware presentation, and professional platform architecture.
+The public website focuses on customer value, paper-only development, responsible risk communication, and compliance-aware presentation while technical and intellectual-property work remains confidential.
 
 Former project name: QuantX India.
 

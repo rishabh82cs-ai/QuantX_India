@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://quantx-india.com/</loc></url>
-  <url><loc>https://quantx-india.com/index.html</loc></url>
-  <url><loc>https://quantx-india.com/demo.html</loc></url>
-  <url><loc>https://quantx-india.com/early-access.html</loc></url>
-  <url><loc>https://quantx-india.com/compliance.html</loc></url>
   <url>
-  <loc>https://quantx-india.com/roadmap.html</loc>
-  <priority>0.9</priority>
+    <loc>https://quantx-india.com/</loc>
+    <lastmod>2026-08-03</lastmod>
   </url>
   <url>
-  <loc>https://quantx-india.com/markets.html</loc>
-  <priority>0.9</priority>
+    <loc>https://quantx-india.com/about.html</loc>
+    <lastmod>2026-08-03</lastmod>
   </url>
-
+  <url>
+    <loc>https://quantx-india.com/roadmap.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://quantx-india.com/demo.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://quantx-india.com/markets.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://quantx-india.com/early-access.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://quantx-india.com/compliance.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://quantx-india.com/terms-risk-disclosure.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://quantx-india.com/privacy.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://quantx-india.com/third-party-licenses.html</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
 </urlset>
